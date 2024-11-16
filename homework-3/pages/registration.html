@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="keywords"
+        content="зоотовари, інтернет-магазин, товари для тварин, корм для собак, корм для котів, аксесуари для домашніх улюбленців, догляд за тваринами, іграшки для тварин, зоотовари онлайн, зоомагазин">
+  <title>ЛапкиShop</title>
+  <link rel="stylesheet" href="../style/registration.css">
+</head>
+<body>
+<div class="wrapper">
+  <header class="header">
+    <div class="header__container">
+      <div class="logo-company">
+        <a href="../index.html">
+          <img src="../images/logo.png" alt="ЛапкіShop - логотип">
+        </a>
+      </div>
+
+      <nav class="menu">
+        <ul class="menu-list">
+          <li><a href="contacts.html">Контакти</a></li>
+          <li><a href="account.html">Кабінет</a></li>
+          <li><a href="checkout.html">Кошик</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+
+    <section class="registration">
+      <div class="registration__container">
+        <h2 class="registration-form-title">Реєстрація</h2>
+
+        <form class="registration-form" action="#" method="post">
+          <div class="registration-form-item">
+            <label for="name">Ваше ім'я:</label>
+            <input type="text" name="name" id="name" placeholder="Ім'я" required>
+          </div>
+
+          <div class="registration-form-item">
+            <label for="email">Ваша електронна пошта:</label>
+            <input type="email" name="email" id="email" placeholder="E-Mail" required>
+          </div>
+
+          <div class="registration-form-item">
+            <label for="telephone">Ваш телефон:</label>
+            <input type="tel" name="telephone" id="telephone" placeholder="Телефон"
+                   required>
+          </div>
+
+          <div class="registration-form-item">
+            <label for="birthday">Дата народження:</label>
+            <input type="date" name="birthday" id="birthday">
+          </div>
+
+          <div class="registration-form-item">
+            <label for="password">Пароль:</label>
+            <input type="password" name="password" id="password" placeholder="Пароль:"
+                   required>
+          </div>
+
+          <div class="registration-form-item">
+            <label for="animal">Які в Вас тварини:</label>
+            <select class="animal" id="animal" name="animal[]" multiple>
+              <option value="cat">Кіт</option>
+              <option value="dog">Собака</option>
+              <option value="bird">Пташка</option>
+              <option value="hamster">Хомяк</option>
+              <option value="rabbit">Кролик</option>
+            </select>
+          </div>
+
+          <div class="registration-form-item subscribe-item">
+            <div>
+              <label for="subscribe">Бажаєте отримувати новини?</label>
+            </div>
+            <div>
+              <input type="checkbox" name="news" id="subscribe" value="yes" required>
+            </div>
+          </div>
+
+          <div class="registration-form-item">
+            <button class="registration-submit__button" type="submit">Зареєструватись</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-info__container">
+      <ul class="footer-info">
+        <li><a href="about-us.html#about-us">Про магазин</a></li>
+        <li><a href="contacts.html">Контакти</a></li>
+      </ul>
+      <p class="footer-info-text">&copy;2024 Зоомагазин ® Всі права захищені </p>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
