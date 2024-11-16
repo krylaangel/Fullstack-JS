@@ -60,4 +60,10 @@ body {
     border-radius: 10px;
 }
 
+[class*="__button"]:hover {
+    background-color: #02b27f;
+    transition: all .4s ease;
+    cursor: pointer;
+}
+
 /*===========================*/
