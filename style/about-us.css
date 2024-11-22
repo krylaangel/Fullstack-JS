@@ -43,8 +43,8 @@
     display: flex;
     flex-direction: row;
     gap: 15px;
+    flex-wrap: wrap;
 }
-
 .advantages-item h3,
 .assortment-list li {
     display: flex;
