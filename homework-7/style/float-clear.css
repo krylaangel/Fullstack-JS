@@ -1,0 +1,37 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    min-height: 100%;
+    background-color: #dddddd;
+}
+
+section {
+    margin: 20px;
+    background-color: #cbe6dd;
+    height: 25vh;
+}
+
+span {
+    font-size: 20px;
+}
+
+/*<==============================>*/
+.container {
+    max-width: 1200px;
+    height: auto
+}
+
+p {
+    text-indent: 15px
+}
+
+img {
+    float: left;
+}
+.end {
+    clear: left;
+}
