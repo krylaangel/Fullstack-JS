@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+    color: #000000;
+    margin: 0;
+    display: flex;
+    justify-content: center
+}
+
+div {
+    height: 800px;
+    width: 800px;
+}
+
+.bottom,
+.mondrian {
+    height: 100%;
+    width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: black solid 7px;
+}
+
+table td {
+    margin: 0;
+    padding: 0;
+}
+
+/*=====================================>*/
+.mondrian-left-white {
+    border-left: black solid 7px;
+}
+
+.mondrian-second-red-item {
+    background-color: red;
+    border-top: black solid 10px;
+    border-left: black solid 10px;
+}
+
+/*=====================================>*/
+.mondrian-top,
+.mondrian-right {
+    width: 100%;
+}
+
+.mondrian-top {
+    height: 15%;
+}
+
+.cell-mondrian-right-left {
+    border-right: black solid 15px;
+}
+.cell-mondrian-right-right{
+    border-left: black solid 15px;
+
+}
+
+.mondrian-right {
+    height: 85%;
+    border-bottom: black solid 10px;
+
+}
+
+.cell-mondrian-right-left {
+    width: 30%;
+}
+
+.cell-mondrian-right-right {
+    width: 29%;
+    background-color: yellow;
+}
+
+.mondrian-right-red-top-left,
+.mondrian-right-red-top-right,
+.mondrian-right-red-bottom-left,
+.mondrian-right-red-bottom-right {
+    background-color: red;
+    height: 42.5%;
+}
+
+.mondrian-right-red-top-right,
+.mondrian-right-red-bottom-right {
+    border-right: black solid 15px;
+}
+
+.mondrian-right-white-item-left {
+    border-right: black solid 15px;
+}
+
+.mondrian-right-white-item-left,
+.mondrian-right-white-item-right {
+    border-top: black solid 15px;
+    border-bottom: black solid 15px;
+}
+
+.mondrian-right-yellow {
+    width: 29%;
+    background-color: yellow;
+}
+
+.mondrian-right-cell-bottom-black,
+.mondrian-right-cell-bottom-white {
+    width: 29%;
+    border-right: black solid 15px;
+    border-top: black solid 7px;
+
+}
+
+.mondrian-right-red-top-left,
+.mondrian-right-red-bottom-left {
+    border-left: black solid 15px;
+}
+
+.mondrian-right-cell-bottom-black {
+    background-color: black
+}
+
+.mondrian-right-white-bottom {
+    border-top: black solid 15px;
+    border-right: black solid 15px;
+}
+
+/*=====================================>*/
+.cell-bottom-table {
+    height: 25%;
+}
+
+.bottom {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+.white_general-item {
+    border: none;
+    width: 10%;
+}
+
+.black-right-item,
+.black-left-item {
+    background-color: #000000;
+}
+
+.black-right-item {
+    border-right: black solid 10px;
+    border-left: black solid 10px;
+    border-top: black solid 20px;
+    border-bottom: black solid 10px;
+}
+
+.black-left-item {
+    border-left: black solid 10px;
+    width: 20%;
+}
+
+.white_general-right-item {
+    border-left: none;
+    border-bottom: none;
+    border-top: none;
+    width: 10%;
+}
+
+.white_general-left-item {
+    border-left: black solid 10px;
+}
+
+.white_general-top-item {
+    width: 20%;
+    height: 50%;
+}
+
+.yellow-item {
+    background-color: yellow;
+    border-right: black solid 20px;
+    width: 10%;
+}
+
+.blue-item {
+    background-color: blue;
+    border-left: black solid 10px;
+    border-bottom: black solid 10px;
+}
