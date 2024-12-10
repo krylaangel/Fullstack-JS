@@ -39,7 +39,7 @@ h2 {
 [class*="__mini"] {
     border: 1px black solid;
     height: 40px;
-    background-color: #02b27f;
+    background-color: #366756;
 }
 
 [class*="__container"]::before,
@@ -80,7 +80,10 @@ h2 {
 .layout-triple-right__item {
     float: right;
 }
-
+.layout-triple-right__container .move{
+    background-color: #dddddd;
+    border: none;
+}
 
 .layout-triple-right__item .main {
     margin-bottom: 5px;
@@ -114,5 +117,8 @@ h2 {
 .layout-triple-center__item .main {
     margin-bottom: 5px;
 }
-
+.layout-triple-center__container .move{
+    background-color: #dddddd;
+    border: none;
+}
 
