@@ -1,10 +1,17 @@
+:root {
+    --main-color: rgb(238, 239, 241);
+    --secondary-color-text: #34547A;
+    --secondary-color: rgb(52, 84, 122)
+
+}
+
 * {
     box-sizing: border-box;
 }
 
 body {
     width: 100%;
-    background: rgb(238, 239, 241);
+    background: var(--main-color);
     font-family: Roboto, sans-serif;
     height: 100vh;
 }
@@ -60,7 +67,7 @@ body {
 }
 
 .menu li:hover {
-    color: #34547A;
+    color: var(--secondary-color-text);
     font-weight: 500;
     cursor: pointer;
 }
@@ -87,7 +94,7 @@ body {
 
 .first-screen__button {
     text-transform: uppercase;
-    background-color: rgb(52, 84, 122);
+    background-color: var(--secondary-color);
     max-width: 225px;
     color: white;
     border: none;
@@ -98,7 +105,7 @@ body {
 
 .first-screen__button:hover {
     transition: all .25s ease;
-    background-color: #27405a;
+    background-color: var(--secondary-color);
 }
 
 /*<===============================================>*/
@@ -111,7 +118,7 @@ body {
 /*<===============================================>*/
 
 .numbers__container {
-    background: rgb(52, 84, 122);
+    background: var(--secondary-color);
     color: white;
     padding-block: 100px;
 }
@@ -171,7 +178,7 @@ body {
 
 /*<===============================================>*/
 .footer__container {
-    background-color: #34547A;
+    background-color: var(--secondary-color);
     color: white;
     padding-block: 49px 49px;
 }
