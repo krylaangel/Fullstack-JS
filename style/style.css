@@ -7,33 +7,39 @@ body {
     font-family: 'Montserrat', sans-serif;
     height: 100vh;
     width: 100%;
-    background: rgb(227, 231, 237);
+    background: #f8f5f2;
 }
 
-a:hover {
-    text-decoration: underline;
-    color: #51666c;
-}
 
 a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
     font-weight: bold;
+    font-size: 20px;
+    border-bottom: #333333 3px solid;
+    color: #333333;
+
+}
+
+a:hover {
+    color: rgba(0, 0, 0, 0.38);
+    border-bottom: slategray 3px solid;
+    transition: border-spacing 0.5s ease;
 
 }
 
 [class*="__container"] {
     width: 100%;
     font-weight: 400;
-    font-size: 16px;
     padding-inline: 17%;
     margin: 0 auto;
     text-align: center;
+
 }
 
 [class*="__title"] {
     font-size: 32px;
     font-weight: 500;
+    color: #2c3e50;
 }
 
 /*<=============================================>*/
@@ -50,7 +56,7 @@ a {
 
 .homework__item {
     border: 2px solid #6c6b6b;
-    background-color: #d7d8df;
+    background-color: #ffffff;
     box-shadow: 2px 3px 3px #0c3643;
     border-radius: 10px;
     opacity: 0.8;
@@ -61,7 +67,4 @@ a {
 .homework__item:hover {
     opacity: 1;
     cursor: pointer;
-    border: 1px solid black;
-    box-shadow: 2px 2px 25px #0c3643;
-    transition: opacity 0.5s ease, border 0.5s ease;
 }
