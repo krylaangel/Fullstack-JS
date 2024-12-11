@@ -284,9 +284,11 @@ body {
     .footer--fullname {
         font-size: 0.8rem;
     }
+
     .footer--description {
         font-size: 0.5rem;
     }
+
     .footer__container {
         padding-block: clamp(15px, 5vw, 49px);
     }
