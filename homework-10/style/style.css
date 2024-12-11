@@ -106,7 +106,7 @@ body {
     }
 
     .header__container {
-        padding-block: clamp(10px, 5vw, 79px);
+        padding-block: clamp(30px, 5vw, 79px) clamp(15px, 5vw, 79px);
     }
 }
 
