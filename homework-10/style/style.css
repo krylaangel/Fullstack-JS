@@ -1,8 +1,13 @@
 :root {
     --main-color: rgb(238, 239, 241);
     --secondary-color-text: #34547A;
-    --secondary-color: rgb(23, 59, 101)
-
+    --secondary-color: rgb(52, 84, 122);
+    --main-color-text: rgb(114, 114, 114);
+    --font-main-size: 16px;
+    --font-title-size-small: 32px;
+    --font-title-size-large: 48px;
+    --main-color-background--hover-bottom: #2e4e75;
+    --main-color-text-bottom: #fbfaff
 }
 
 * {
@@ -19,25 +24,19 @@ body {
 [class*="__container"] {
     width: 100%;
     font-weight: 400;
-    font-size: 16px;
+    font-size: var(--font-main-size);
     padding-inline: 17%;
     margin: 0 auto;
 }
 
-@media (max-width: 219px) {
-    [class*="__container"] {
-        padding-inline: 0;
-    }
-}
-
 [class*="__description"] {
     max-width: 540px;
-    color: rgb(114, 114, 114);
+    color: var(--main-color-text);
     line-height: 26px;
 }
 
 [class*="__title"] {
-    font-size: 32px;
+    font-size: var(--font-title-size-small);
     font-weight: 500;
 }
 
@@ -55,6 +54,28 @@ body {
     padding-bottom: 50px;
 }
 
+@media (max-width: 675px) {
+    .works__title--center,
+    .works__description--centre,
+    .about-me__title--center,
+    .about-me__description--centre {
+        text-indent: 5px;
+    }
+
+    [class*="__container"] {
+        padding-inline: 12%;
+    }
+
+    [class*="__title"] {
+        text-align: center;
+        font-size: clamp(20px, 5vw, var(--font-title-size-small));
+    }
+
+    [class*="__description"] {
+        text-align: justify;
+    }
+}
+
 /*<=============================================>*/
 .header__container {
     padding-block: 79px;
@@ -66,7 +87,8 @@ body {
     gap: 42px;
 }
 
-.menu li:hover {
+.menu li:hover,
+.menu li:focus {
     color: var(--secondary-color-text);
     font-weight: 500;
     cursor: pointer;
@@ -78,14 +100,25 @@ body {
     min-width: 100px;
 }
 
+@media (max-width: 375px) {
+    .menu-list {
+        justify-content: center;
+        gap: clamp(var(--font-title-size-small), 5vw, 42px);
+    }
+
+    .header__container {
+        padding-block: 10%;
+    }
+}
+
 /*<=============================================>*/
 
 .first-screen__container {
     padding-block: 62px 141px;
 }
 
-.first-screen__title {
-    font-size: 48px;
+.first-screen__title--large {
+    font-size: var(--font-title-size-large);
 }
 
 .first-screen__description {
@@ -96,23 +129,37 @@ body {
     text-transform: uppercase;
     background-color: var(--secondary-color);
     max-width: 225px;
-    color: white;
+    color: var(--main-color-text-bottom);
     border: none;
     letter-spacing: 0.1em;
     padding-inline: 41px;
     padding-block: 19px 21px;
 }
 
-.first-screen__button:hover {
+.first-screen__button:hover,
+.first-screen__button:focus {
     transition: all .25s ease;
-    background-color: var(--secondary-color);
+    background-color: var(--main-color-background--hover-bottom);
+}
+
+@media (max-width: 675px) {
+    .first-screen__title--large {
+        font-size: clamp(28px, 5vw, var(--font-title-size-large));
+    }
+
+}
+
+@media (max-width: 480px) {
+    .first-screen__button {
+        max-width: 200px;
+        font-size: 10px;
+    }
 }
 
 /*<===============================================>*/
 .about-me__container {
     background: rgb(249, 249, 249);
     padding-block: 112px 100px;
-    margin: 0 auto;
 }
 
 /*<===============================================>*/
@@ -128,7 +175,6 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(0, 141px));
     grid-auto-rows: 50px;
-
     justify-content: space-between;
     gap: 28px;
 }
@@ -147,11 +193,16 @@ body {
     font-size: 21px;
 }
 
+@media (max-width: 675px) {
+    .numbers-block {
+        justify-content: center;
+    }
+}
+
 /*<===============================================>*/
 
 .works__container {
     padding-block: 100px 57px;
-    padding-inline: 0;
 }
 
 /*<===============================================>*/
@@ -173,7 +224,22 @@ body {
     min-height: 600px;
     border: none;
     position: absolute;
+}
 
+@media (max-width: 675px) {
+    .video__container {
+        min-height: 400px;
+        padding-bottom: 50px;
+    }
+
+    .video-content {
+        min-height: 400px;
+    }
+
+    .video__container iframe {
+        min-height: 400px;
+        width: 100%;
+    }
 }
 
 /*<===============================================>*/
