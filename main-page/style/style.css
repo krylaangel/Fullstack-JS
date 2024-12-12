@@ -14,14 +14,13 @@ a {
     text-decoration: none;
     font-weight: bold;
     font-size: 20px;
-    border-bottom: #333333 3px solid;
     color: #333333;
 }
 
 a:hover {
     color: rgba(0, 0, 0, 0.38);
-    border-bottom: slategray 3px solid;
-    transition: border-spacing 0.5s ease;
+    border-bottom: slategray 1px solid;
+    transition: border-bottom 0.5s ease;
 
 }
 
@@ -43,20 +42,51 @@ a:hover {
 /*<=============================================>*/
 .header__container {
     background-color: #2c3e50;
-    height: 50px;
+    height: 200px;
+    width: 100%;
     color: white;
     display: flex;
-    gap: 10px;
-    opacity: 0.8;
+    overflow: hidden;
+    padding: 2.5rem;
+    justify-content: center;
+    align-items: center;
+}
 
+.header__container .header--items {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    animation-name: catch;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
 }
 
 .header--item {
-    background-color: rgba(67, 62, 62, 0.38);
-    height: 100%;
-    min-width: 25%;
+    margin: 0;
+    background-color: rgba(174, 136, 136, 0.38);
+    height: 10rem;
+    width: 10rem;
+    align-content: center;
     border: 1px solid black;
     border-radius: 10px;
+}
+
+.header__container:hover .header--items {
+    cursor: pointer;
+    animation-play-state: paused;
+    opacity: 1;
+}
+
+
+@keyframes catch {
+    0% {
+        transform: translateX(0); /* Начало анимации */
+    }
+       100% {
+        transform: translateX(100%); /* Сдвиг на четыре блока */
+    }
 }
 
 /*<=============================================>*/
