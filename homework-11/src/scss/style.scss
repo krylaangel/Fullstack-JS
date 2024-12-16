@@ -1,0 +1,198 @@
+@use "reset.css";
+@use "base/general" as *;
+@use "base/header";
+@use "base/footer";
+@use "abstracts/variable" as *;
+
+
+html {
+  scroll-behavior: smooth;
+
+  body {
+    width: 100%;
+    background: $main-color;
+    font-family: Roboto, sans-serif;
+    height: 100vh;
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .first-screen__container {
+      @extend .__container;
+      padding-block: 62px 141px;
+      @include respond-to(large) {
+        padding-block: clamp(45px, 5vw, 62px) clamp(60px, 5vw, 141px);
+      }
+
+      h1 {
+        @extend .__title;
+        font-size: $font-title-size-large;
+        @include respond-to(large) {
+          font-size: clamp(28px, 5vw, $font-title-size-large);
+        }
+      }
+
+      p {
+        @extend .__description;
+        padding-block: 60px;
+      }
+
+      button {
+        text-transform: uppercase;
+        background-color: $secondary-color;
+        max-width: 225px;
+        color: $main-color-text-bottom;
+        border: none;
+        letter-spacing: 0.1em;
+        padding-inline: 41px;
+        padding-block: 19px 21px;
+        @include respond-to(medium) {
+          max-width: 200px;
+          font-size: 10px;
+        }
+
+        &:hover, &:focus {
+          transition: all .25s ease;
+          background-color: $main-color-background--hover-bottom;
+        }
+      }
+    }
+
+    .about-me__container {
+      @extend .__container;
+      background: rgb(249, 249, 249);
+      padding-block: 112px 100px;
+      @include respond-to(large) {
+        padding-block: clamp(45px, 5vw, 112px) clamp(60px, 5vw, 100px);
+      }
+
+      h2 {
+        @extend .__title;
+        @extend .all-center;
+        @extend .all-title--center;
+      }
+
+      p {
+        @extend .__description;
+        @extend .all-center;
+      }
+    }
+
+    .numbers__container {
+      @extend .__container;
+      background: $secondary-color;
+      color: white;
+      padding-block: 100px;
+      @include respond-to(large) {
+        padding-block: clamp(45px, 5vw, 100px);
+      }
+
+      .numbers-block {
+        max-width: 1110px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(0, 141px));
+        grid-auto-rows: 50px;
+        justify-content: space-between;
+        gap: 28px;
+        @include respond-to(large) {
+          justify-content: center;
+        }
+
+        .numbers__item {
+          background: left no-repeat url("../../assets/images/numbers.svg");
+          padding-left: 70px;
+          display: flex;
+          flex-direction: column;
+          background-size: contain;
+          padding-block: 0;
+
+          .numbers__item--project {
+            font-weight: 500;
+            font-size: 21px;
+          }
+        }
+
+      }
+    }
+
+    .works__container {
+      @extend .__container;
+      padding-block: 100px 57px;
+      @include respond-to(large) {
+        padding-block: clamp(45px, 5vw, 100px) clamp(45px, 5vw, 57px);
+      }
+
+      h2 {
+        @extend .__title;
+        @extend .all-center;
+        @extend .all-title--center;
+      }
+
+      p {
+        @extend .__description;
+        @extend .all-center;
+      }
+
+    }
+
+    .video__container {
+      @extend .__container;
+      min-height: 700px;
+      padding-bottom: 100px;
+      @include respond-to(large) {
+        min-height: 400px;
+        padding-bottom: 50px;
+      }
+
+      .video-content {
+        max-width: 1110px;
+        position: relative;
+        min-height: 600px;
+        @include respond-to(large) {
+          min-height: 400px;
+        }
+
+        iframe {
+          width: 100%;
+          min-height: 600px;
+          border: none;
+          position: absolute;
+          @include respond-to(large) {
+            min-height: 400px;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .sticky-top {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50px;
+      font-size: 2rem;
+      position: fixed;
+      z-index: 2;
+      height: 60px;
+      width: 60px;
+      background-color: #6791ba;
+      bottom: 40px;
+      right: 40px;
+      box-shadow: #5c82a6 1px 2px 2px;
+
+      &:hover,
+      &:focus {
+        height: 62px;
+        width: 62px;
+        background-color: #5e84a8;
+        box-shadow: #466685 2px 3px 3px;
+        transition: background-color 0.25s ease,
+        box-shadow 0.25s ease,
+        width 0.25s ease,
+        height 0.25s ease;
+      }
+    }
+  }
+}

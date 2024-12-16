@@ -1,0 +1,30 @@
+@use "../abstracts/variable" as *;
+@use "general" as *;
+
+
+footer {
+  @extend .__container;
+  background-color: $secondary-color;
+  color: white;
+  padding-block: 49px;
+  @include respond-to(large) {
+    padding-block: clamp(15px, 5vw, 49px);
+  }
+
+  h3 {
+    font-size: 21px;
+    font-weight: 500;
+    padding-bottom: 19px;
+    max-width: 1110px;
+    @include respond-to(large) {
+      font-size: 0.8rem;
+    }
+  }
+
+  p {
+    font-size: 13px;
+    @include respond-to(large) {
+      font-size: 0.5rem;
+    }
+  }
+}

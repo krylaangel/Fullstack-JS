@@ -1,0 +1,68 @@
+@use "../abstracts/variable" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+@mixin indent($indent: 30px) {
+  text-indent: $indent;
+
+}
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == small {
+    @media (max-width: 375px) {
+      @content;
+    }
+  } @else if $breakpoint == medium {
+    @media (max-width: 480px) {
+      @content;
+    }
+  } @else if $breakpoint == large {
+    @media (max-width: 675px) {
+      @content;
+    }
+  }
+}
+
+.__container {
+  width: 100%;
+  font-weight: 400;
+  font-size: $font-main-size;
+  padding-inline: 17%;
+  margin: 0 auto;
+  @include respond-to(large) {
+    padding-inline: 12%;
+  }
+}
+
+.__description {
+  max-width: 540px;
+  color: $main-color-text;
+  line-height: 26px;
+  @include respond-to(large) {
+    text-align: justify;
+      }
+}
+
+.__title {
+  font-size: $font-title-size-small;
+  font-weight: 500;
+  @include respond-to(large) {
+    text-align: center;
+    font-size: clamp(20px, 5vw, $font-title-size-small);
+  }
+}
+
+.all-center {
+  margin-inline: auto;
+  @include indent;
+  text-align: center;
+  @include respond-to(large) {
+    @include indent(5px);
+  }
+}
+
+.all-title--center {
+  padding-bottom: 50px;
+}
