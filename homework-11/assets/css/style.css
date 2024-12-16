@@ -1,0 +1,314 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video{
+  margin:0;
+  padding:0;
+  border:0;
+  font-size:100%;
+  vertical-align:baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section{
+  display:block;
+}
+*[hidden]{
+  display:none;
+}
+
+body{
+  line-height:1;
+}
+
+menu, ol, ul{
+  list-style:none;
+}
+
+blockquote, q{
+  quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after{
+  content:"";
+  content:none;
+}
+
+table{
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+*{
+  -webkit-box-sizing:border-box;
+          box-sizing:border-box;
+}
+
+.__container, html body .first-screen__container, html body .about-me__container, html body .numbers__container, html body .works__container, html body .video__container, footer, header{
+  width:100%;
+  font-weight:400;
+  font-size:16px;
+  padding-inline:17%;
+  margin:0 auto;
+}
+
+.__description, html body .first-screen__container p, html body .about-me__container p, html body .works__container p{
+  max-width:540px;
+  color:rgb(114, 114, 114);
+  line-height:26px;
+}
+
+.__title, html body .first-screen__container h1, html body .about-me__container h2, html body .works__container h2{
+  font-size:32px;
+  font-weight:500;
+}
+
+.all-center, html body .about-me__container h2, html body .about-me__container p, html body .works__container h2, html body .works__container p{
+  margin-inline:auto;
+  text-indent:30px;
+  text-align:center;
+}
+
+.all-title--center, html body .about-me__container h2, html body .works__container h2{
+  padding-bottom:50px;
+}
+
+header{
+  padding-block:79px;
+}
+header nav ol{
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -ms-flex-wrap:wrap;
+      flex-wrap:wrap;
+  gap:42px;
+}
+header nav ol li{
+  text-transform:uppercase;
+  letter-spacing:0.1em;
+  min-width:100px;
+}
+header nav ol li a:hover, header nav ol li a:focus{
+  color:#34547A;
+  font-weight:500;
+  cursor:pointer;
+}
+
+footer{
+  background-color:rgb(52, 84, 122);
+  color:white;
+  padding-block:49px;
+}
+footer h3{
+  font-size:21px;
+  font-weight:500;
+  padding-bottom:19px;
+  max-width:1110px;
+}
+footer p{
+  font-size:13px;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+html body{
+  width:100%;
+  background:rgb(238, 239, 241);
+  font-family:Roboto, sans-serif;
+  height:100vh;
+}
+html body a{
+  text-decoration:none;
+  color:black;
+}
+html body .first-screen__container{
+  padding-block:62px 141px;
+}
+html body .first-screen__container h1{
+  font-size:48px;
+}
+html body .first-screen__container p{
+  padding-block:60px;
+}
+html body .first-screen__container button{
+  text-transform:uppercase;
+  background-color:rgb(52, 84, 122);
+  max-width:225px;
+  color:#fbfaff;
+  border:none;
+  letter-spacing:0.1em;
+  padding-inline:41px;
+  padding-block:19px 21px;
+}
+html body .first-screen__container button:hover, html body .first-screen__container button:focus{
+  -webkit-transition:all 0.25s ease;
+  transition:all 0.25s ease;
+  background-color:#2e4e75;
+}
+html body .about-me__container{
+  background:rgb(249, 249, 249);
+  padding-block:112px 100px;
+}
+html body .numbers__container{
+  background:rgb(52, 84, 122);
+  color:white;
+  padding-block:100px;
+}
+html body .numbers__container .numbers-block{
+  max-width:1110px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(0, 141px));
+  grid-auto-rows:50px;
+  -webkit-box-pack:justify;
+      -ms-flex-pack:justify;
+          justify-content:space-between;
+  gap:28px;
+}
+html body .numbers__container .numbers-block .numbers__item{
+  background:left no-repeat url(../images/numbers.svg);
+  padding-left:70px;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+      -ms-flex-direction:column;
+          flex-direction:column;
+  background-size:contain;
+  padding-block:0;
+}
+html body .numbers__container .numbers-block .numbers__item .numbers__item--project{
+  font-weight:500;
+  font-size:21px;
+}
+html body .works__container{
+  padding-block:100px 57px;
+}
+html body .video__container{
+  min-height:700px;
+  padding-bottom:100px;
+}
+html body .video__container .video-content{
+  max-width:1110px;
+  position:relative;
+  min-height:600px;
+}
+html body .video__container .video-content iframe{
+  width:100%;
+  min-height:600px;
+  border:none;
+  position:absolute;
+}
+html body .sticky-top{
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-align:center;
+      -ms-flex-align:center;
+          align-items:center;
+  -webkit-box-pack:center;
+      -ms-flex-pack:center;
+          justify-content:center;
+  border-radius:50px;
+  font-size:2rem;
+  position:fixed;
+  z-index:2;
+  height:60px;
+  width:60px;
+  background-color:#6791ba;
+  bottom:40px;
+  right:40px;
+  -webkit-box-shadow:#5c82a6 1px 2px 2px;
+          box-shadow:#5c82a6 1px 2px 2px;
+}
+html body .sticky-top:hover, html body .sticky-top:focus{
+  height:62px;
+  width:62px;
+  background-color:#5e84a8;
+  -webkit-box-shadow:#466685 2px 3px 3px;
+          box-shadow:#466685 2px 3px 3px;
+  -webkit-transition:background-color 0.25s ease, width 0.25s ease, height 0.25s ease, -webkit-box-shadow 0.25s ease;
+  transition:background-color 0.25s ease, width 0.25s ease, height 0.25s ease, -webkit-box-shadow 0.25s ease;
+  transition:background-color 0.25s ease, box-shadow 0.25s ease, width 0.25s ease, height 0.25s ease;
+  transition:background-color 0.25s ease, box-shadow 0.25s ease, width 0.25s ease, height 0.25s ease, -webkit-box-shadow 0.25s ease;
+}
+@media (max-width: 675px){
+  .__container, html body .first-screen__container, html body .about-me__container, html body .numbers__container, html body .works__container, html body .video__container, footer, header{
+    padding-inline:12%;
+  }
+  .__description, html body .first-screen__container p, html body .about-me__container p, html body .works__container p{
+    text-align:justify;
+  }
+  .__title, html body .first-screen__container h1, html body .about-me__container h2, html body .works__container h2{
+    text-align:center;
+    font-size:clamp(20px, 5vw, 32px);
+  }
+  .all-center, html body .about-me__container h2, html body .about-me__container p, html body .works__container h2, html body .works__container p{
+    text-indent:5px;
+  }
+  header{
+    padding-block:clamp(30px, 5vw, 79px) clamp(15px, 5vw, 79px);
+  }
+  header nav ol{
+    -webkit-box-pack:center;
+        -ms-flex-pack:center;
+            justify-content:center;
+  }
+  footer{
+    padding-block:clamp(15px, 5vw, 49px);
+  }
+  footer h3{
+    font-size:0.8rem;
+  }
+  footer p{
+    font-size:0.5rem;
+  }
+  html body .first-screen__container{
+    padding-block:clamp(45px, 5vw, 62px) clamp(60px, 5vw, 141px);
+  }
+  html body .first-screen__container h1{
+    font-size:clamp(28px, 5vw, 48px);
+  }
+  html body .about-me__container{
+    padding-block:clamp(45px, 5vw, 112px) clamp(60px, 5vw, 100px);
+  }
+  html body .numbers__container{
+    padding-block:clamp(45px, 5vw, 100px);
+  }
+  html body .numbers__container .numbers-block{
+    -webkit-box-pack:center;
+        -ms-flex-pack:center;
+            justify-content:center;
+  }
+  html body .works__container{
+    padding-block:clamp(45px, 5vw, 100px) clamp(45px, 5vw, 57px);
+  }
+  html body .video__container{
+    min-height:400px;
+    padding-bottom:50px;
+  }
+  html body .video__container .video-content{
+    min-height:400px;
+  }
+  html body .video__container .video-content iframe{
+    min-height:400px;
+    width:100%;
+  }
+}
+@media (max-width: 480px){
+  html body .first-screen__container button{
+    max-width:200px;
+    font-size:10px;
+  }
+}

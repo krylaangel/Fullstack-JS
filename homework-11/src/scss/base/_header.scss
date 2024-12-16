@@ -1,0 +1,33 @@
+@use "general" as *;
+@use "../abstracts/variable" as *;
+
+header {
+  @extend .__container;
+  padding-block: 79px;
+  @include respond-to(large) {
+    padding-block: clamp(30px, 5vw, 79px) clamp(15px, 5vw, 79px);
+  }
+
+  nav {
+    ol {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 42px;
+      @include respond-to(large) {
+        justify-content: center;
+      }
+
+      li {
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        min-width: 100px;
+
+        a:hover, a:focus {
+          color: $secondary-color-text;
+          font-weight: 500;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
