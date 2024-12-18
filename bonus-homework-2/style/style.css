@@ -16,9 +16,6 @@ body {
 
 .table {
     min-height: 500px;
-    position: absolute;
-    overflow: hidden;
-    overflow-x: auto;
     min-width: 205px;
     background-color: white;
     display: grid;
