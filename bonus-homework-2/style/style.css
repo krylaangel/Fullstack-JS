@@ -1,0 +1,37 @@
+@import "areas.css";
+
+body {
+    height: 100vh;
+}
+
+[class*="__top"],
+[class*="__second"],
+[class*="__third"],
+[class*="__fourth"],
+[class*="__sixth"],
+[class*="__seventh"]{
+    border: black solid 4px;
+}
+
+
+.table__top {
+    height: 500px;
+    /*max-width: 800px;*/
+    background-color: white;
+    border: black solid 4px;
+    display: grid;
+    grid-template-columns: repeat(16, minmax(0, 50px));
+    grid-auto-rows: 12.5% 14.5% 14.5% 12.5% 12.5% 12.5% 8.5%;
+    grid-template-areas:
+            "table__top--1 table__top--1 table__top--2 table__top--2 table__top--2 table__top--3 table__top--3 table__top--4"
+            "table__second--1 table__second--2 table__second--2 table__second--2 table__second--2 table__second--3 table__second--3 table__top--4"
+            "table__third--1 table__second--2 table__second--2 table__second--2 table__second--2 table__third--2 table__third--3 table__top--4"
+            "table__third--1 table__fourth--1 table__fourth--1 table__fourth--2 table__fourth--2 table__fourth--3 table__fourth--3 table__top--4"
+            "table__fifth--1 table__fourth--1 table__fourth--1 table__fifth--2 table__fifth--2 table__fifth--3 table__fifth--3 table__fifth--4"
+            "table__fifth--1 table__sixth--1 table__sixth--1 table__sixth--2 table__sixth--2 table__fifth--3 table__fifth--3 table__fifth--4"
+            "table__fifth--1 table__sixth--1 table__sixth--1 table__seventh--1 table__seventh--1 table__seventh--1 table__seventh--1 table__fifth--4";
+;
+
+
+
+}
