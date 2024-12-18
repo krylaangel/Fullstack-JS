@@ -15,6 +15,7 @@ body {
 
 
 .table {
+    padding: 5%;
     min-height: 500px;
     min-width: 205px;
     background-color: white;
