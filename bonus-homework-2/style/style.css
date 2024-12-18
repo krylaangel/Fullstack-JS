@@ -14,17 +14,16 @@ body {
 }
 
 
-.table__top {
+.table {
     min-height: 500px;
     position: absolute;
     overflow: hidden;
     overflow-x: auto;
     min-width: 205px;
     background-color: white;
-    border: black solid 4px;
     display: grid;
-    grid-template-columns: repeat(16, minmax(40px, 50px));
-    grid-template-rows: minmax(30px, 62px) repeat(2, minmax(35px, 72px)) repeat(3, minmax(30px, 62px)) minmax(15px, 40px);
+    grid-template-columns: repeat(16, minmax(30px, 55px));
+    grid-template-rows: minmax(30px, 62px) repeat(2, minmax(35px, 72px)) repeat(3, minmax(30px, 50px)) minmax(15px, 40px);
     grid-template-areas:
             "table__top--1 table__top--1 table__top--2 table__top--2 table__top--2 table__top--3 table__top--3 table__top--4"
             "table__second--1 table__second--2 table__second--2 table__second--2 table__second--2 table__second--3 table__second--3 table__top--4"
