@@ -119,4 +119,7 @@ a:hover {
 
 .homework__item h2:hover {
     cursor: pointer;
+    justify-content: space-between;
 }
+
+

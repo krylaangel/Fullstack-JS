@@ -1,0 +1,81 @@
+
+.table__top--1 {
+    grid-area: table__top--1;
+}
+
+.table__top--2 {
+    grid-area: table__top--2;
+}
+
+.table__top--3 {
+    grid-area: table__top--3;
+    background-color: yellow;
+}
+
+.table__top--4 {
+    grid-area: table__top--4;
+}
+
+.table__second--1 {
+    grid-area: table__second--1;
+}
+.table__second--2 {
+    grid-area: table__second--2;
+    background-color: red;
+
+}
+.table__second--3 {
+    grid-area: table__second--3;
+    background-color: yellow;
+}
+.table__third--1 {
+    grid-area: table__third--1;
+}
+.table__third--2 {
+    grid-area: table__third--2;
+}
+.table__third--3 {
+    grid-area: table__third--3;
+}
+.table__fourth--1 {
+    grid-area: table__fourth--1;
+    background-color: black;
+
+}
+.table__fourth--2 {
+    grid-area: table__fourth--2;
+}
+.table__fourth--3 {
+    grid-area: table__fourth--3;
+}
+.table__fifth--1{
+    grid-area: table__fifth--1;
+    background-color: yellow;
+    border: black solid 4px;
+
+}
+.table__fifth--2{
+    grid-area: table__fifth--2;
+}
+.table__fifth--3{
+    grid-area: table__fifth--3;
+    background-color: #0e22a6;
+    border: black solid 4px;
+
+}
+.table__fifth--4{
+    grid-area: table__fifth--4;
+    background-color: red;
+    border: black solid 4px;
+
+}
+.table__sixth--1{
+    grid-area: table__sixth--1;
+}
+.table__sixth--2{
+    grid-area: table__sixth--2;
+    background-color: black;
+}
+.table__seventh--1{
+    grid-area: table__seventh--1;
+}
