@@ -1,0 +1,107 @@
+
+body {
+    padding: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rectangle {
+    fill: #0e22a6;
+    stroke-width: 5px;
+    stroke: #0c186e;
+    transform-origin: center;
+}
+
+.square {
+    stroke-width: 5px;
+    fill: #6b0bd5;
+    stroke: #180230;
+}
+
+circle {
+    fill: #0c3643;
+    stroke-width: 5px;
+    stroke: #031d25;
+
+}
+
+ellipse {
+    fill: #870711;
+    stroke-width: 5px;
+    stroke: #3a0509;
+}
+
+.line {
+    fill: none;
+    stroke: red;
+    stroke-width: 2;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: drawLine 3s infinite ease-in-out, changeColorsLine 3s infinite ease-in-out;
+}
+
+@keyframes drawLine {
+    0% {
+        stroke-dashoffset: 1000;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+.animated {
+    opacity: 0.8;
+    animation: pulse 3s infinite ease-in-out, changeColors 3s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(1.04);
+    }
+    60% {
+        transform: scale(0.98);
+    }
+    75% {
+        transform: scale(1.02);
+    }
+
+}
+
+@keyframes changeColorsLine {
+    0%, 100% {
+        stroke: #590312;
+    }
+    25% {
+        stroke: #c60617;
+    }
+    50% {
+        stroke: #ff2a2a; /* Яркий красный для пика */
+    }
+    75% {
+        stroke: #39010b;
+    }
+}
+
+@keyframes changeColors {
+    0%, 100% {
+        fill: #590312;
+        stroke: #350202;
+    }
+    25% {
+        fill: #c60617;
+        stroke: #930303;
+    }
+    50% {
+        fill: #c60617;
+        stroke: #930303;
+    }
+    75% {
+        fill: #39010b;
+        stroke: #170000;
+    }
+}
