@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header class="header row border">
+  <nav class="navbar navbar-expand-lg bg-light py-4 px-lg-5 px-2 col-12 border bg-body-secondary">
+
+    <div class="container-fluid">
+      <img src="image/logo.png" class="navbar-brand rounded float-start" alt="logo">
+
+      <a class="navbar-brand text-shadow" href="#">LapkiShop</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="container-fluid px-0 mt-2">
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Пошук" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Пошук</button>
+        </form>
+      </div>
+
+      <div class="collapse navbar-collapse  ps-4" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Контакти</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Кабінет</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Кошик</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Товари
+            </a>
+            <ul class="dropdown-menu  p-0 m-0 border-0 bg-body-secondary">
+              <li><a class="dropdown-item nav-link" href="#">Коти</a></li>
+              <li><a class="dropdown-item nav-link" href="#">Собаки</a></li>
+              <li><a class="dropdown-item nav-link" href="#">Гризуни</a></li>
+              <li><a class="dropdown-item nav-link" href="#">Птахи</a></li>
+
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main class="bg-light row">
+  <section class="col-lg-3 col-md-6 border pe-0">
+    <div id="carouselBanners" class="carousel slide ps-lg-5 ps-2 pb-0" data-bs-ride="true">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselBanners" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Banner 1"></button>
+        <button type="button" data-bs-target="#carouselBanners" data-bs-slide-to="1"
+                aria-label="Banner 2"></button>
+        <button type="button" data-bs-target="#carouselBanners" data-bs-slide-to="2"
+                aria-label="Banner 3"></button>
+        <button type="button" data-bs-target="#carouselBanners" data-bs-slide-to="3"
+                aria-label="Banner 4"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="image/cat.png" class="d-block w-100" alt="cat-banner">
+        </div>
+        <div class="carousel-item ">
+          <img src="image/dog.png" class="d-block w-100" alt="dog-banner">
+        </div>
+        <div class="carousel-item">
+          <img src="image/birds.png" class="d-block w-100" alt="dog-banner">
+        </div>
+        <div class="carousel-item">
+          <img src="image/hamster.png" class="d-block w-100" alt="dog-banner">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselBanners"
+              data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselBanners"
+              data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <section class="col-lg-6 col-md-6 p-0 border">
+
+    <div class="accordion accordion-flush" id="accordionMainInfo">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-heading-item-week">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-itemWeek" aria-expanded="false" aria-controls="flush-collapseOne">
+            Товар тижня
+          </button>
+        </h2>
+        <div id="flush-itemWeek" class="accordion-collapse collapse" aria-labelledby="flush-heading-item-week"
+             data-bs-parent="#accordionMainInfo">
+          <div class="accordion-body">
+            <div class="row">
+              <div class="col-sm-6 d-flex">
+                <div class="card">
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Корм для дорослих котів Royal canin Fit</h5>
+                    <div>
+                      <img src="image/fit.png" alt="корм для дорослих котів royal canin fit">
+
+                    </div>
+                    <p class="card-text">Royal Canin Fit — це корм для дорослих котів, який підтримує здоров'я та
+                      активність домашніх улюбленців...
+                    </p>
+                    <a href="#" class="btn btn-primary mt-auto">Купити</a>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 d-flex">
+                <div class="card">
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Корм для старих котів Royal canin Ageing 12+</h5>
+                    <div><img src="image/ageing-12.png" alt="корм для старих котів royal canin ageing 12+">
+                    </div>
+                    <p class="card-text">Royal Canin Ageing 12+ — це корм для старших котів віком від 12 років,
+                      розроблений для підтримки здорового старіння.
+                    </p>
+                    <a href="#" class="btn btn-primary mt-auto">Купити</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            Як вибрати корм для домашніх улюбленців?
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+             data-bs-parent="#accordionMainInfo">
+          <div class="accordion-body">Правильний вибір корму залежить від віку, породи та особливостей здоров’я вашого
+            улюбленця. Кошенята та цуценята потребують корму з високим вмістом білка та вітамінів для росту. Дорослим
+            тваринам підходить збалансоване харчування, тоді як літнім потрібні корми з додатковими добавками для
+            підтримки суглобів і здоров’я. Завжди читайте склад корму й обирайте якісні продукти від перевірених
+            виробників.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            Як доглядати за шерстю улюбленця?
+          </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+             data-bs-parent="#accordionMainInfo">
+          <div class="accordion-body">Догляд за шерстю залежить від типу тварини. Для короткошерстих улюбленців
+            достатньо регулярного розчісування раз на тиждень. Довгошерстих собак і котів рекомендується вичісувати
+            щодня, щоб уникнути ковтунів. Використовуйте шампуні, які підходять для типу шерсті вашого улюбленця, і не
+            забувайте про кондиціонери. Грумінг може бути не лише гігієнічною процедурою, але й часом для зближення з
+            вашим улюбленцем.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="col-lg-3 col-md- 12 border">
+
+    <form class="row g-3 needs-validation p-3" novalidate>
+      <h4>Вхід в особистий кабінет
+      </h4>
+      <div class="row g-3">
+
+        <div class="col-12">
+          <label for="email">Ваша електронна пошта:</label>
+          <input type="email" id="email" class="form-control" placeholder="Електронна адреса" aria-label="e-mail"
+                 required>
+        </div>
+
+        <div class="col-12">
+          <label for="password">Пароль:</label>
+          <input type="password" id="password" class="form-control" placeholder="Пароль" aria-label="password" required>
+        </div>
+
+        <div class="col">
+          <button type="submit" class="btn btn-primary col-12">Увійти</button>
+        </div>
+
+        <div class="col">
+          <button type="button" class="btn btn-primary col-12" data-bs-toggle="modal"
+                  data-bs-target="#registrationModal">Зареєструватись
+          </button>
+        </div>
+      </div>
+    </form>
+    <!-- Modal -->
+    <div class="modal fade" id="registrationModal" tabindex="-1" aria-labelledby="registratexampleModalLabel"
+         aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="registratModalLabel">Реєстрація</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form class="row g-3 needs-validation px-3">
+              <div class="row g-3">
+
+                <div class="col-12">
+                  <label for="emailRegister">Ваша електронна пошта:</label>
+                  <input type="email" id="emailRegister" class="form-control" placeholder="Електронна адреса"
+                         aria-label="e-mail" required>
+                </div>
+
+                <div class="col-12">
+                  <label for="telephone">Ваш телефон:</label>
+                  <input type="tel" id="telephone" class="form-control" placeholder="Телефон:"
+                         aria-label="telephone"
+                         required>
+                </div>
+
+                <div class="col-12">
+                  <label for="passwordRegister">Пароль:</label>
+                  <input type="password" id="passwordRegister" class="form-control" placeholder="Пароль"
+                         aria-label="password"
+                         required>
+                </div>
+
+                <div class="col-12">
+                  <label for="birthday">Дата народження:</label>
+                  <input type="date" id="birthday" class="form-control"
+                         aria-label="birthday"
+                         required>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+            <button type="button" class="btn btn-primary">Зареєструватись</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</main>
+
+
+<footer class="bg-light border row px-lg-5 px-2 py-2">
+  <h6>Контактна інформація магазину:</h6>
+  <div class="d-flex justify-content-between flex-wrap">
+    <ul class="footer-info list-unstyled">
+      <li>Телефон: +380(00)0000000</li>
+      <li>Email: info@petshop.ua</li>
+      <li>Адреса: м. Київ, вул. Велика Васильківська, 10000</li>
+    </ul>
+    <ul class="list-unstyled">
+      <li class="col-12"><i class="fab fa-facebook"></i> Facebook</li>
+      <li class="col-12"><i class="fab fa-instagram"></i> Instagram</li>
+    </ul>
+  </div>
+
+  <p class="col-12">©2024 Зоомагазин ® Всі права захищені</p>
+</footer>
+
+</body>
+</html>
