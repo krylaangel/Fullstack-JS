@@ -1,0 +1,65 @@
+.vertical-lr {
+    writing-mode: vertical-lr;
+}
+
+.section-header {
+    background-image: url('image/MG.png'),
+    linear-gradient(to top, rgba(30, 75, 115, 0.5), rgba(30, 75, 115, 0));
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 75%;
+    position: relative;
+    z-index: -1;
+    opacity: 1;
+    height: 900px;
+    width: 100%;
+}
+
+.section-header:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0.5;
+    z-index: -10;
+    background-image: url('image/HG.png'),
+    linear-gradient(to top, rgba(30, 75, 115, 0.5), rgba(30, 75, 115, 0));
+    background-size: auto auto;
+    background-repeat: no-repeat;
+    height: auto;
+    width: 100%;
+}
+
+.section-header:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 1;
+    z-index: -1;
+    background-image: url('image/VG.png'),
+    linear-gradient(180.00deg, rgba(11, 29, 38, 0), rgb(11, 29, 38) 61.384%);
+    background-size: 100% 65%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: auto;
+    width: 100%;
+}
+
+@media ( max-width: 900px) {
+    .section-header {
+        background-size: auto 75%;
+    }
+
+    .section-header:after {
+        background-size: auto 75%;
+    }
+}

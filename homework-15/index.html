@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Tailwind</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/output.css">
+  <link rel="stylesheet" href="style-general.css">
+  <script defer src="burger-menu.js"></script>
+  <script defer src="scroll.js"></script>
+</head>
+<body class="bg-black text-white">
+
+<div class="flex items-center space-x-3 space-y-4 fixed right-4 top-40 z-10">
+  <ul class="space-y-4">
+    <li class="hover:text-amber-200 pointer-events-auto"><a id="startLink" href="#start">Start</a> </li>
+    <li class="hover:text-amber-200 pointer-events-auto"><a id="link1" href="#01">01</a> </li>
+    <li class="hover:text-amber-200 pointer-events-auto" ><a id="link2" href="#02">02</a> </li>
+    <li class="hover:text-amber-200 pointer-events-auto" ><a id="link3" href="#03">03</a> </li>
+  </ul>
+<div class="bg-white w-2 h-36">
+  <div class="h-1/4" id="divStart"></div>
+  <div class="h-1/4" id="div1"></div>
+  <div class="h-1/4" id="div2"></div>
+  <div class="h-1/4" id="div3"></div>
+
+</div>
+</div>
+<section class="w-dvw px-[8%] py-14 section-header">
+  <!--    <div class="absolute left-0 top-0 w-full h-full z-10 bg-gradient-to-b from-black/10 to-black/70"></div>-->
+  <!--    <img class="absolute left-0 top-0 w-full bg-no-repeat -z-10 object-cover" src="image/HG.png">-->
+  <!--    <img class="absolute left-0 top-0 w-full bg-no-repeat -z-10 object-cover" src="image/MG.png">-->
+  <!--    <img class="absolute left-0 top-0 w-full h-full bg-no-repeat -z-10" src="image/VG.png">-->
+
+  <header id="start" class="flex flex-wrap justify-between">
+    <div class="py-3">
+      <svg width="108" height="24" viewBox="0 0 108 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_1_71)">
+          <path d="M0.96 23H9.856V22.552C6.656 22.136 5.696 20.792 5.696 17.56V2.872H5.888L14.208 23.032H15.36L22.816 2.872H22.976V20.728C22.976 22.008 22.176 22.456 19.904 22.552V23H30.944V22.552C28.256 22.456 27.616 21.944 27.616 20.728V2.968C27.616 1.752 28.256 1.208 30.944 1.112V0.695999H22.784L16.736 17.144H16.576L9.984 0.695999H0.96V1.112C3.712 1.176 4.896 2.648 4.896 4.568V17.56C4.896 20.792 3.968 22.168 0.96 22.552V23Z"
+                fill="white"/>
+          <path d="M52.128 23.352H53.664V6.104C53.664 2.936 54.528 1.56 57.536 1.112V0.695999H48.448V1.112C51.68 1.496 52.864 2.936 52.864 6.104V16.728H52.832L40.512 0.695999H32.96V1.112C35.712 1.24 36.896 2.872 36.896 4.824V17.56C36.896 20.792 35.968 22.168 32.96 22.552V23H41.984V22.552C38.72 22.2 37.696 20.792 37.696 17.56V4.728H37.728L52.128 23.352Z"
+                fill="white"/>
+          <path d="M63.6 23H75.696V22.552C72.848 22.488 71.984 21.944 71.984 20.728V1.272H72.752C75.216 1.272 77.136 3.736 79.376 8.088L79.856 8.024L79.696 0.695999H59.568L59.376 8.024L59.856 8.088C62.128 3.64 64.08 1.272 66.512 1.272H67.312V20.728C67.312 21.944 66.416 22.488 63.6 22.552V23Z"
+                fill="white"/>
+          <path d="M102.128 23.352H103.664V6.104C103.664 2.936 104.528 1.56 107.536 1.112V0.695999H98.448V1.112C101.68 1.496 102.864 2.936 102.864 6.104V16.728H102.832L90.512 0.695999H82.96V1.112C85.712 1.24 86.896 2.872 86.896 4.824V17.56C86.896 20.792 85.968 22.168 82.96 22.552V23H91.984V22.552C88.72 22.2 87.696 20.792 87.696 17.56V4.728H87.728L102.128 23.352Z"
+                fill="white"/>
+        </g>
+        <defs>
+          <clipPath id="clip0_1_71">
+            <rect width="108" height="24" fill="white"/>
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+
+    <nav id="menu" class="md:flex hidden">
+      <ul class="flex flex-wrap text-lg">
+        <li class="menu-screen hover:text-amber-200"><a href="#">Equipment</a></li>
+        <li class="menu-screen hover:text-amber-200"><a href="#">About us</a></li>
+        <li class="menu-screen hover:text-amber-200"><a href="#">Blog</a></li>
+      </ul>
+    </nav>
+
+    <div class="flex flex-row justify-end text-lg space-x-1 py-3">
+      <div>
+        <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+             fill="none" viewBox="0 0 24 24">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.951-1.488A3.987 3.987 0 0 0 13 16h-2a3.987 3.987 0 0 0-3.951 3.512A8.948 8.948 0 0 0 12 21Zm3-11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+        </svg>
+      </div>
+      <a class="hover:text-amber-200" href="#">Account</a>
+    </div>
+
+    <button id="burgerButton" class="hover:amber-200 md:hidden text-white">
+      <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+
+    <nav id="mobileMenu" class="bg-amber-600 z-10 opacity-100 md:hidden text-white space-y-4 p-4 hidden absolute right-0 top-24">
+      <ul class="text-lg">
+        <li class="menu-screen hover:text-amber-200"><a href="#">Equipment</a></li>
+        <li class="menu-screen hover:text-amber-200"><a href="#">About us</a></li>
+        <li class="menu-screen hover:text-amber-200"><a href="#">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="flex pt-48">
+    <div class="flex flex-col space-y-5 w-1/4">
+      <h3 class="vertical-lr px-0 py-0">Follow us</h3>
+      <a href="https://instagram.com" target="_blank" class="hover:amber-200 vertical-lr">
+        <svg class="w-6 h-6 text-white hover:text-amber-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+          <path fill="currentColor" fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd"/>
+        </svg>
+      </a>
+      <a href="https://twitter.com" target="_blank" class="hover:amber-200 vertical-lr">
+        <svg class="w-6 h-6 text-white hover:text-amber-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+          <path fill-rule="evenodd" d="M22 5.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.343 8.343 0 0 1-2.605.981A4.13 4.13 0 0 0 15.85 4a4.068 4.068 0 0 0-4.1 4.038c0 .31.035.618.105.919A11.705 11.705 0 0 1 3.4 4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 6.1 13.635a4.192 4.192 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 2 18.184 11.732 11.732 0 0 0 8.291 20 11.502 11.502 0 0 0 19.964 8.5c0-.177 0-.349-.012-.523A8.143 8.143 0 0 0 22 5.892Z" clip-rule="evenodd"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="max-w-2xl space-y-8 ps-4 pe-5 w-3/4">
+      <div class="flex gap-x-5 pe-5">
+        <svg class="justify-items-center" width="72px" height="20px">
+          <rect class="stroke-amber-200 fill-amber-200" width="72px" height="2px" y="13"></rect>
+        </svg>
+        <h3 class="text-amber-200 uppercase tracking-widest text-xs sm:text-sm md:text-base lg:text-xl">A Hiking
+          guide</h3>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl capitalize">
+        Be prepared for the Mountains and beyond!
+      </h1>
+    </div>
+  </div>
+</section>
+<section class="w-dvw px-[10%] py-14 relative -mt-64">
+  <div class="flex items-center relative">
+    <div class="w-2/4">
+      <div id="01" class="text-9xl md:text-11xl font-bold absolute top-10 md:top-0 px-0 py-0 opacity-30 -z-1">01</div>
+      <div class="flex gap-x-5 px-[10%]">
+        <svg class="justify-items-center" width="72px" height="20px">
+          <rect class="stroke-amber-200 fill-amber-200" width="72px" height="2px" y="13"></rect>
+        </svg>
+        <h3 class="title-start">GEt
+          Started</h3>
+      </div>
+
+      <h2 class="title-end">What level of hiker are
+        you?</h2>
+      <p class="paragraph-style">
+        Determining what level of hiker you are can be an important tool when planning future hikes.
+        <span class="hidden md:inline"> This hiking level guide will help you plan hikes according to different hike ratings set by various websites like All Trails and
+            Modern Hiker.</span> What type of hiker are you – novice, moderate, advanced moderate, expert, or expert
+        backpacker?
+      </p>
+
+      <div class="py-5 flex items-center">
+        <a href="#" class="hover:text-amber-600 items-center paragraph-style text-amber-200 pe-4">read more</a>
+        <svg class="w-[26px] h-[26px] text-amber-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
+        </svg>
+      </div>
+    </div>
+    <div class="w-2/4">
+      <img class="object-cover" src="image/01.png" alt="picture">
+    </div>
+  </div>
+
+</section>
+<section class="w-dvw px-[10%] py-14 relative">
+  <div class="flex items-center xl:pe-[15%] ">
+
+    <div class="w-2/4">
+      <img class="object-cover" src="image/02.png" alt="picture">
+    </div>
+    <div class="w-2/4">
+      <div id="02" class="text-9xl md:text-11xl font-bold absolute top-10 md:top-0 px-0 py-0 opacity-30 -z-1">02</div>
+
+      <div class="flex gap-x-5 px-[10%]">
+        <svg class="justify-items-center" width="72px" height="20px">
+          <rect class="stroke-amber-200 fill-amber-200" width="72px" height="2px" y="13"></rect>
+        </svg>
+        <h3 class="title-start">Hiking
+          Essentials</h3>
+      </div>
+
+      <h2 class="title-end">Picking the right Hiking
+        Gear!</h2>
+      <p class="paragraph-style pe-0">
+        The nice thing about beginning hiking is that you don’t really need any special gear, you can probably get away
+        with things you already have. Let’s start with clothing. <span class="hidden md:inline">A typical mistake hiking beginners make is wearing jeans and regular clothes, which
+        will get heavy and chafe wif they get sweaty or wet.</span>
+      </p>
+
+      <div class="py-5 flex items-center">
+        <a href="#" class="hover:text-amber-600 items-center paragraph-style text-amber-200 pe-4">read more</a>
+        <svg class="w-[26px] h-[26px] text-amber-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="w-dvw px-[10%] py-14 relative">
+  <div class="flex items-center">
+    <div class="w-2/4">
+      <div id="03" class="text-9xl md:text-11xl font-bold absolute top-10 md:top-0 px-0 py-0 opacity-30 -z-1">03</div>
+      <div class="flex gap-x-5 px-[10%]">
+        <svg class="justify-items-center" width="72px" height="20px">
+          <rect class="stroke-amber-200 fill-amber-200" width="72px" height="2px" y="13"></rect>
+        </svg>
+        <h3 class="title-start">where you go is the key</h3>
+      </div>
+
+      <h2 class="title-end">Understand Your Map & Timing</h2>
+      <p class="paragraph-style">
+        To start, print out the hiking guide and map. If it’s raining, throw them in a Zip-Lock bag. Read over the
+        guide, study the map, and have a good idea of what to expect. <span class="hidden md:inline">I like to know what my next landmark is as I hike.
+        For example, I’ll read the guide and know that say, in a mile, I make a right turn at the junction...</span>
+      </p>
+
+      <div class="py-5 flex items-center">
+        <a href="#" class="hover:text-amber-600 items-center paragraph-style text-amber-200 pe-4">read more</a>
+        <svg class="w-[26px] h-[26px] text-amber-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
+        </svg>
+      </div>
+    </div>
+    <div class="w-2/4">
+      <img class="object-cover" src="image/03.png" alt="picture">
+    </div>
+  </div>
+</section>
+
+<footer class="w-dvw px-[9%]">
+  <div class="flex xl:pe-[16%] py-14 justify-between">
+  <div class="w-2\4 space-y-4">
+    <div>
+      <svg class="" width="108" height="24" viewBox="0 0 108 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_1_71)">
+          <path d="M0.96 23H9.856V22.552C6.656 22.136 5.696 20.792 5.696 17.56V2.872H5.888L14.208 23.032H15.36L22.816 2.872H22.976V20.728C22.976 22.008 22.176 22.456 19.904 22.552V23H30.944V22.552C28.256 22.456 27.616 21.944 27.616 20.728V2.968C27.616 1.752 28.256 1.208 30.944 1.112V0.695999H22.784L16.736 17.144H16.576L9.984 0.695999H0.96V1.112C3.712 1.176 4.896 2.648 4.896 4.568V17.56C4.896 20.792 3.968 22.168 0.96 22.552V23Z"
+                fill="white"/>
+          <path d="M52.128 23.352H53.664V6.104C53.664 2.936 54.528 1.56 57.536 1.112V0.695999H48.448V1.112C51.68 1.496 52.864 2.936 52.864 6.104V16.728H52.832L40.512 0.695999H32.96V1.112C35.712 1.24 36.896 2.872 36.896 4.824V17.56C36.896 20.792 35.968 22.168 32.96 22.552V23H41.984V22.552C38.72 22.2 37.696 20.792 37.696 17.56V4.728H37.728L52.128 23.352Z"
+                fill="white"/>
+          <path d="M63.6 23H75.696V22.552C72.848 22.488 71.984 21.944 71.984 20.728V1.272H72.752C75.216 1.272 77.136 3.736 79.376 8.088L79.856 8.024L79.696 0.695999H59.568L59.376 8.024L59.856 8.088C62.128 3.64 64.08 1.272 66.512 1.272H67.312V20.728C67.312 21.944 66.416 22.488 63.6 22.552V23Z"
+                fill="white"/>
+          <path d="M102.128 23.352H103.664V6.104C103.664 2.936 104.528 1.56 107.536 1.112V0.695999H98.448V1.112C101.68 1.496 102.864 2.936 102.864 6.104V16.728H102.832L90.512 0.695999H82.96V1.112C85.712 1.24 86.896 2.872 86.896 4.824V17.56C86.896 20.792 85.968 22.168 82.96 22.552V23H91.984V22.552C88.72 22.2 87.696 20.792 87.696 17.56V4.728H87.728L102.128 23.352Z"
+                fill="white"/>
+        </g>
+        <defs>
+          <clipPath id="clip0_1_72">
+            <rect width="108" height="24" fill="white"/>
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+    <p class="text-xxs md:text-md lg:text-lg pr-5">Get out there & discover your next slope, mountain & destination!</p>
+  </div>
+  <div class="w-1\4 space-y-4">
+    <h3 class="text-amber-200 text-xs	md:text-md lg:text-lg pe-5">More on The Blog</h3>
+    <ul class="space-y-4 pe-5">
+      <li class="hover:text-amber-200 text-xxs	md:text-md lg:text-lg"><a href="#">About MNTN</a></li>
+      <li class="hover:text-amber-200 text-xxs	md:text-md lg:text-lg"><a href="#">Contributors & Writers</a></li>
+      <li class="hover:text-amber-200 text-xxs	md:text-md lg:text-lg"><a href="#">Write For Us</a></li>
+      <li class="hover:text-amber-200 text-xxs	md:text-md lg:text-lg"><a href="#">Contact Us</a></li>
+      <li class="hover:text-amber-200 text-xxs	md:text-md lg:text-lg"><a href="#">Privacy Policy</a></li>
+    </ul>
+  </div>
+
+  <div class="w-1\4 space-y-4">
+    <h3 class="text-amber-200 text-xs	md:text-md lg:text-lg">More on MNTN</h3>
+    <ul class="space-y-4">
+      <li class="hover:text-amber-200 text-xxs	md:text-md lg:text-lg"><a href="#">The Team</a></li>
+      <li class="hover:text-amber-200 text-xxs	md:text-md lg:text-lg"><a href="#">Jobs</a></li>
+      <li class="hover:text-amber-200 text-xxs	md:text-md lg:text-lg"><a href="#">Press</a></li>
+    </ul>
+  </div>
+  </div>
+
+</footer>
+</body>
+</html>
+
+<!--space-y-5 pt-28-->
