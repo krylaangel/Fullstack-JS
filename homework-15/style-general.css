@@ -2,9 +2,23 @@
     writing-mode: vertical-lr;
 }
 
+
+.bg-size{
+    /*background-image: url('image/man_rocks_sky.jpg');*/
+    /*background-size: auto 100%;*/
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+    height: 900px;
+    /*width: 100%;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*top: 0;*/
+    /*bottom: 0;*/
+}
+
 .section-header {
-    background-image: url('image/MG.png'),
-    linear-gradient(to top, rgba(30, 75, 115, 0.5), rgba(30, 75, 115, 0));
+    background-image: url('image/MG.png');
+    /*linear-gradient(to top, rgba(30, 75, 115, 0.5), rgba(30, 75, 115, 0));*/
     left: 0;
     right: 0;
     top: 0;
@@ -12,8 +26,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 75%;
-    position: relative;
-    z-index: -1;
+position: relative;
+    z-index: -2;
     opacity: 1;
     height: 900px;
     width: 100%;
