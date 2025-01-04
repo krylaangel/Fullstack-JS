@@ -650,10 +650,6 @@ video {
   pointer-events: auto;
 }
 
-.visible {
-  visibility: visible;
-}
-
 .fixed {
   position: fixed;
 }
@@ -664,6 +660,14 @@ video {
 
 .relative {
   position: relative;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
+.left-0 {
+  left: 0px;
 }
 
 .right-0 {
@@ -678,32 +682,16 @@ video {
   top: 2.5rem;
 }
 
+.top-24 {
+  top: 6rem;
+}
+
 .top-40 {
   top: 10rem;
 }
 
-.bottom-0 {
-  bottom: 0px;
-}
-
-.left-0 {
-  left: 0px;
-}
-
-.top-36 {
-  top: 9rem;
-}
-
-.top-20 {
-  top: 5rem;
-}
-
-.top-28 {
-  top: 7rem;
-}
-
-.top-24 {
-  top: 6rem;
+.-z-0 {
+  z-index: 0;
 }
 
 .-z-10 {
@@ -716,22 +704,6 @@ video {
 
 .z-30 {
   z-index: 30;
-}
-
-.-z-0 {
-  z-index: 0;
-}
-
-.mt-40 {
-  margin-top: 10rem;
-}
-
-.mr-0 {
-  margin-right: 0px;
-}
-
-.ms-0 {
-  margin-inline-start: 0px;
 }
 
 .flex {
@@ -754,20 +726,16 @@ video {
   height: 1.5rem;
 }
 
+.h-\[16\.66\%\] {
+  height: 16.66%;
+}
+
 .h-\[26px\] {
   height: 26px;
 }
 
 .h-\[900px\] {
   height: 900px;
-}
-
-.h-\[30\%\] {
-  height: 30%;
-}
-
-.h-\[16\.66\%\] {
-  height: 16.66%;
 }
 
 .w-1 {
@@ -887,35 +855,17 @@ video {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
 }
 
+.bg-transparent {
+  background-color: transparent;
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
-.bg-transparent {
-  background-color: transparent;
-}
-
 .bg-customlayered {
   background-image: url('../image/man_rocks_sky.jpg');
-}
-
-.bg-gradientBg {
-  background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0) 0%, rgb(0, 0, 0, 0.8) 100%);;
-}
-
-.bg-gradient-to-t {
-  background-image: linear-gradient(to top, var(--tw-gradient-stops));
-}
-
-.from-transparent {
-  --tw-gradient-from: transparent var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.to-transparent {
-  --tw-gradient-to: transparent var(--tw-gradient-to-position);
 }
 
 .bg-cover {
@@ -1069,22 +1019,8 @@ video {
   opacity: 0.3;
 }
 
-.opacity-10 {
-  opacity: 0.1;
-}
-
 .opacity-70 {
   opacity: 0.7;
-}
-
-.blur-\[10px\] {
-  --tw-blur: blur(10px);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.blur-\[100px\] {
-  --tw-blur: blur(100px);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .blur-3xl {
@@ -1107,16 +1043,8 @@ video {
 }
 
 @media (min-width: 640px) {
-  .sm\:visible {
-    visibility: visible;
-  }
-
   .sm\:flex {
     display: flex;
-  }
-
-  .sm\:hidden {
-    display: none;
   }
 
   .sm\:text-4xl {
