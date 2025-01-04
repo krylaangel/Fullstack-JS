@@ -3,20 +3,26 @@ module.exports = {
     content: ["./*.html"],
     theme: {
         extend: {
+            backgroundImage: {
+                'customlayered': "url('../image/man_rocks_sky.jpg')",
+                'gradientBg': "linear-gradient(to bottom, rgb(0, 0, 0, 0) 0%, rgb(0, 0, 0, 0.8) 100%);"
+            },
+
             fontSize: {
                 'xxs': '8px',
                 '11xl': '240px'
             },
 
-            //     backgroundImage:{
-            //       'custom-layered': "url('../image/HG.png'), url('../image/VG.png'), url('../image/MG.png')"
-            //     },
-            //     backgroundSize: {
-            //       'custom-layered': 'cover, contain, auto',
-            //     },
-            //     backgroundPosition: {
-            //       'custom-layered': 'center, top right, bottom left, auto, opacity-50',
-            //     },
+                //
+                // backgroundImage:{
+                //   'custom-layered': "url('../image/HG.png'), url('../image/VG.png'), url('../image/MG.png')"
+                // },
+                // backgroundSize: {
+                //   'custom-layered': 'cover, contain, auto',
+                // },
+                // backgroundPosition: {
+                //   'custom-layered': 'center, top right, bottom left, auto, opacity-50',
+                // },
         },
     },
     plugins: [
