@@ -5,7 +5,6 @@ module.exports = {
         extend: {
             backgroundImage: {
                 'customlayered': "url('../image/man_rocks_sky.jpg')",
-                'gradientBg': "linear-gradient(to bottom, rgb(0, 0, 0, 0) 0%, rgb(0, 0, 0, 0.8) 100%);"
             },
 
             fontSize: {
