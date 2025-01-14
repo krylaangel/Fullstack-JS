@@ -1,3 +1,111 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'mons-bold';
+        src: url(../assets/fonts/Montserrat-Bold.ttf) format('truetype');
+    }
+    @font-face {
+        font-family: 'mons-reg';
+        src: url(../assets/fonts/Montserrat-Regular.ttf) format('truetype');
+    }
+}
+
+* {
+    font-family: 'mons-reg', serif;
+    font-size: 19px;
+}
+
+.text__title {
+    @apply text-3xl font-mons-bold grad-text
+}
+
+.section__container {
+    @apply px-[30px] md:px-[60px] mt-[30px] md:mt-[60px] lg:flex lg:gap-[60px];
+}
+
+.padding-custom {
+    @apply uppercase px-[10px] py-[5px] rounded-[12px]
+}
+
+.grad-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[rgb(240,20,90)] to-[rgb(239,128,128)]
+}
+
+.menu-info {
+    @apply text-grayUniversal text-base whitespace-nowrap
+}
+
+.menu-burger {
+    @apply w-[335px] md:w-fit bg-baseBg rounded-lg text-base flex justify-center md:flex-none
+}
+
+.menu-burger-active {
+    @apply hover:bg-rectangleSeparator hover:md:bg-transparent
+}
+
+.slider-div {
+    @apply absolute bg-white p-5 inset-0 flex justify-center items-center transition-all duration-500 ease-in-out;
+    /*opacity: 0; !* Скрываем слайд *!*/
+    /*z-index: 0; !* Устанавливаем базовый уровень слоя *!*/
+    /*animation: slide-animation 16s infinite;*/
+}
+.slider-img {
+    @apply w-auto h-auto max-w-full max-h-full rounded-lg shadow-lg z-10;
+}
+
+/*.slider-div:nth-child(1) {*/
+/*    animation-delay: 0s; !* Первый слайд сразу отображается *!*/
+/*}*/
+
+/*.slider-div:nth-child(2) {*/
+/*    animation-delay: 4s; !* Второй слайд появляется после 4 секунд *!*/
+/*}*/
+
+/*.slider-div:nth-child(3) {*/
+/*    animation-delay: 8s; !* Третий слайд появляется после 8 секунд *!*/
+/*}*/
+
+/*.slider-div:nth-child(4) {*/
+/*    animation-delay: 12s; !* Четвертый слайд появляется после 12 секунд *!*/
+/*}*/
+
+/*@keyframes slide-animation {*/
+/*    0%, 20% {*/
+/*        opacity: 1;*/
+/*    }*/
+/*    50%, 100% {*/
+/*        opacity: 0;*/
+/*    }*/
+/*}*/
+
+img:target {
+    opacity: 1;
+    left: 0;
+    transition: all .5s ease-in-out;
+}
+img#slide5 {
+    opacity: 1;
+    left: 0;
+}
+img:not(:target), img:target ~ img#slide5  {
+    opacity: 0;
+    left: -40px;
+}
+
+
+
+
+
+:root {
+    --accentColor: #F0145A;
+    --grayUniversalColor: #B3B3BA;
+    --baseBgColor: #F5F5FA;
+    --mainRgColor: #323264;
+    --activeRgColor: #24A3FF;
+    --rectangleSeparator: #E6E6F0
+
+}
+
