@@ -578,6 +578,10 @@ video {
   right: 0px;
 }
 
+.bottom-\[-35px\] {
+  bottom: -35px;
+}
+
 .my-\[30px\] {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -625,6 +629,10 @@ video {
 
 .mt-\[30px\] {
   margin-top: 30px;
+}
+
+.mt-\[60px\] {
+  margin-top: 60px;
 }
 
 .flex {
@@ -694,6 +702,10 @@ video {
 
 .gap-2 {
   gap: 0.5rem;
+}
+
+.gap-\[30px\] {
+  gap: 30px;
 }
 
 .gap-x-4 {
@@ -773,6 +785,10 @@ video {
 
 .ps-1 {
   padding-inline-start: 0.25rem;
+}
+
+.pt-\[30px\] {
+  padding-top: 30px;
 }
 
 .text-center {
