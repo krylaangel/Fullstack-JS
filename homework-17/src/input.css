@@ -46,58 +46,42 @@
     @apply hover:bg-rectangleSeparator hover:md:bg-transparent
 }
 
+.slider {
+    @apply relative w-[255px] h-[90px]
+}
+
 .slider-div {
-    @apply absolute bg-white p-5 inset-0 flex justify-center items-center transition-all duration-500 ease-in-out;
-    /*opacity: 0; !* Скрываем слайд *!*/
-    /*z-index: 0; !* Устанавливаем базовый уровень слоя *!*/
-    /*animation: slide-animation 16s infinite;*/
+    @apply absolute bg-white p-6 inset-0 rounded-lg flex justify-center items-center;
 }
+
 .slider-img {
-    @apply w-auto h-auto max-w-full max-h-full rounded-lg shadow-lg z-10;
+    @apply w-auto h-auto shadow-lg z-10;
 }
 
-/*.slider-div:nth-child(1) {*/
-/*    animation-delay: 0s; !* Первый слайд сразу отображается *!*/
-/*}*/
+.slide-li {
+    @apply block w-[15px] h-[15px] rounded-full bg-activeRg transition-colors duration-500 hover:bg-gray-400
+}
 
-/*.slider-div:nth-child(2) {*/
-/*    animation-delay: 4s; !* Второй слайд появляется после 4 секунд *!*/
-/*}*/
-
-/*.slider-div:nth-child(3) {*/
-/*    animation-delay: 8s; !* Третий слайд появляется после 8 секунд *!*/
-/*}*/
-
-/*.slider-div:nth-child(4) {*/
-/*    animation-delay: 12s; !* Четвертый слайд появляется после 12 секунд *!*/
-/*}*/
-
-/*@keyframes slide-animation {*/
-/*    0%, 20% {*/
-/*        opacity: 1;*/
-/*    }*/
-/*    50%, 100% {*/
-/*        opacity: 0;*/
-/*    }*/
-/*}*/
-
-img:target {
+.slide img:target {
     opacity: 1;
     left: 0;
     transition: all .5s ease-in-out;
 }
-img#slide5 {
+
+.slide img#slide5 {
     opacity: 1;
     left: 0;
 }
-img:not(:target), img:target ~ img#slide5  {
+
+.slider img:not(:target) {
     opacity: 0;
     left: -40px;
 }
 
-
-
-
+.slider img#slide1:not(:target) {
+    opacity: 1;
+    left: 0;
+}
 
 :root {
     --accentColor: #F0145A;

@@ -570,10 +570,6 @@ video {
   position: absolute;
 }
 
-.relative {
-  position: relative;
-}
-
 .bottom-\[-25px\] {
   bottom: -25px;
 }
@@ -582,9 +578,9 @@ video {
   right: 0px;
 }
 
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
+.my-\[30px\] {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .mb-10 {
@@ -631,10 +627,6 @@ video {
   margin-top: 30px;
 }
 
-.block {
-  display: block;
-}
-
 .flex {
   display: flex;
 }
@@ -643,8 +635,8 @@ video {
   display: none;
 }
 
-.h-\[15px\] {
-  height: 15px;
+.h-0\.5 {
+  height: 0.125rem;
 }
 
 .h-\[26px\] {
@@ -655,10 +647,6 @@ video {
   height: 28px;
 }
 
-.h-\[90px\] {
-  height: 90px;
-}
-
 .h-fit {
   height: -moz-fit-content;
   height: fit-content;
@@ -666,14 +654,6 @@ video {
 
 .w-\[11\.62px\] {
   width: 11.62px;
-}
-
-.w-\[15px\] {
-  width: 15px;
-}
-
-.w-\[255px\] {
-  width: 255px;
 }
 
 .w-\[28px\] {
@@ -734,21 +714,12 @@ video {
   white-space: nowrap;
 }
 
-.rounded-full {
-  border-radius: 9999px;
-}
-
 .bg-accent {
   background-color: var(--accentColor);
 }
 
 .bg-baseBg {
   background-color: var(--baseBgColor);
-}
-
-.bg-gray-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(209 213 219 / var(--tw-bg-opacity, 1));
 }
 
 .bg-rectangleSeparator {
@@ -777,9 +748,19 @@ video {
   padding-right: 0.75rem;
 }
 
+.px-\[30px\] {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
 .py-2\.5 {
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
+}
+
+.py-\[30px\] {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .pb-2 {
@@ -862,16 +843,6 @@ video {
 
 .opacity-100 {
   opacity: 1;
-}
-
-.transition-colors {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.duration-300 {
-  transition-duration: 300ms;
 }
 
 * {
@@ -969,89 +940,68 @@ video {
   }
 }
 
+.slider {
+  position: relative;
+  height: 90px;
+  width: 255px;
+}
+
 .slider-div {
   position: absolute;
   inset: 0px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 0.5rem;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-  padding: 1.25rem;
-  transition-property: all;
-  transition-duration: 500ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  /*opacity: 0; !* Скрываем слайд *!*/
-  /*z-index: 0; !* Устанавливаем базовый уровень слоя *!*/
-  /*animation: slide-animation 16s infinite;*/
+  padding: 1.5rem;
 }
 
 .slider-img {
   z-index: 10;
   height: auto;
-  max-height: 100%;
   width: auto;
-  max-width: 100%;
-  border-radius: 0.5rem;
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-/*.slider-div:nth-child(1) {*/
+.slide-li {
+  display: block;
+  height: 15px;
+  width: 15px;
+  border-radius: 9999px;
+  background-color: var(--activeRgColor);
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
 
-/*    animation-delay: 0s; !* Первый слайд сразу отображается *!*/
+.slide-li:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity, 1));
+}
 
-/*}*/
-
-/*.slider-div:nth-child(2) {*/
-
-/*    animation-delay: 4s; !* Второй слайд появляется после 4 секунд *!*/
-
-/*}*/
-
-/*.slider-div:nth-child(3) {*/
-
-/*    animation-delay: 8s; !* Третий слайд появляется после 8 секунд *!*/
-
-/*}*/
-
-/*.slider-div:nth-child(4) {*/
-
-/*    animation-delay: 12s; !* Четвертый слайд появляется после 12 секунд *!*/
-
-/*}*/
-
-/*@keyframes slide-animation {*/
-
-/*    0%, 20% {*/
-
-/*        opacity: 1;*/
-
-/*    }*/
-
-/*    50%, 100% {*/
-
-/*        opacity: 0;*/
-
-/*    }*/
-
-/*}*/
-
-img:target {
+.slide img:target {
   opacity: 1;
   left: 0;
   transition: all .5s ease-in-out;
 }
 
-img#slide5 {
+.slide img#slide5 {
   opacity: 1;
   left: 0;
 }
 
-img:not(:target), img:target ~ img#slide5  {
+.slider img:not(:target) {
   opacity: 0;
   left: -40px;
+}
+
+.slider img#slide1:not(:target) {
+  opacity: 1;
+  left: 0;
 }
 
 :root {
@@ -1071,11 +1021,6 @@ img:not(:target), img:target ~ img#slide5  {
 
 .hover\:bg-baseBg:hover {
   background-color: var(--baseBgColor);
-}
-
-.hover\:bg-gray-400:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(156 163 175 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:bg-grayUniversal:hover {
@@ -1118,6 +1063,10 @@ img:not(:target), img:target ~ img#slide5  {
 
   .md\:mt-2 {
     margin-top: 0.5rem;
+  }
+
+  .md\:mt-\[30px\] {
+    margin-top: 30px;
   }
 
   .md\:mt-\[60px\] {
