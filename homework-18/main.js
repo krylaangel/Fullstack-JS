@@ -40,14 +40,19 @@ console.log(decimal2);
  */
 
 let i = 15;
-/*значение изменяется на 1+, но сама переменная не записывается, поэтому в console.log(prefix) выводится 15*/
-let prefix = i++;
-let postfix = ++i; // значение изменяется и перезаписівается.
+/*значение изменяется на 1+, но сама переменная не записывается, поэтому в console.log(prefixIncr) выводится 15*/
+let prefixIncr = i++;
+let postfixIncr = ++i; // значение изменяется и перезаписівается.
 
-console.log(prefix);
+console.log(prefixIncr);
 /*поскольку предыдущим действием был Постфиксний інкримент - сначала добавилось 15+1,
 но не изменилось значение, потом еще +1 к уже существующим 16 и перезаписалось на 17*/
-console.log(postfix);
+console.log(postfixIncr);
+
+let prefixDecr = i--;
+let postfixDecr = --i;
+console.log(prefixDecr);
+console.log(postfixDecr); // обратная последовательность действий через декремент - возвращает первичное значение 15
 
 
 /*
@@ -85,8 +90,8 @@ function circumference(myNum) {
     return Math.PI * Math.pow(myNum, 2);
 }
 
-let result = Math.trunc(circumference(myNum));
-console.log(result);  // длина окружности и округление до целого
+let result = Math.round(circumference(myNum));
+console.log(result);  // площадь круга и округление до целого
 
 // или альтернатива по условиям дз:
 // константа Pi → myPi
@@ -150,8 +155,30 @@ console.log(isRama);
  *      Результат: 'Мама моет раму, Рама держит маму'
  */
 
-let strReplace= strObj.str.replace('мыла', 'держит');
-console.log(strReplace);
+let counter = 0;
+
+// через match находим все вхождения, далее через if 1 меняем на нужное значение, затем второе.
+let strReplaceLong = strObj.str.replace(
+    /мыла/g, function (match) {
+        counter++;
+        if (counter === 1) {
+            return 'моет';
+        } else if (counter === 2) {
+            return 'держит';
+        }
+        return match;
+    })
+    .replace('рама', 'Рама');
+
+console.log(strReplaceLong); // 'Мама моет раму, рама держит маму'
+
+//вариант 2:
+let strReplace = strObj.str
+    .replace('мыла раму', 'моет раму')
+    .replace('рама мыла', 'Рама держит');
+
+console.log(strReplace); // 'Мама моет раму, рама держит маму'
+
 
 /*
  * #9
