@@ -100,7 +100,7 @@ const myPi = Math.PI;
 console.log(myPi);
 
 // округлене значення числа 89.279 → myRound
-let myRound = Math.trunc(89.279);
+let myRound = Math.round(89.279);
 console.log(myRound);
 
 // випадкове число між 0..10 → myRandom
