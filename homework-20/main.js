@@ -30,7 +30,7 @@ console.log(userObj)
  */
 
 userObj.fullName = function() {
-    return `${userObj.firstName} ${userObj.lastName}`;
+    return `${this.firstName} ${this.lastName}`;
 }
 
 console.log(userObj.fullName())
