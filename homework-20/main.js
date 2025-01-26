@@ -1,3 +1,4 @@
+'use strict'
 console.log('#3. JavaScript homework example file')
 
 /*
@@ -45,7 +46,7 @@ console.log(userObj.fullName())
  * При виконанні завдання не використовуйте оператор if, потрібен розв'язок із логічним оператором ||.
  */
 
-someStr = 'My text'
+let someStr = 'My text'
 
 function defUpperStr(someStr) {
     return (someStr || 'DEFAULT TEXT').toUpperCase();
