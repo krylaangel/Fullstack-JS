@@ -88,10 +88,9 @@ const users = [
 const getValidatedBalance = (balance) => parseFloat(balance.replace(/[$,]/g, ''));
 
 const getPhonesWithLowBalance =
-    (users) => {
-        return users.filter(user => getValidatedBalance(user.balance) < 2000)
-            .map(user => user.phone)
-    };
+    (users) =>
+        users.filter(user => getValidatedBalance(user.balance) < 2000)
+            .map(user => user.phone);
 console.log(getPhonesWithLowBalance(users));
 
 const sumUsersBalance = (users) => {
@@ -102,7 +101,8 @@ console.log(sumUsersBalance(users));
 
 
 const moreBalance = (users) => {
-    const arrSortBalance = users.sort((a, b) => getValidatedBalance(a.balance) - getValidatedBalance(b.balance));
+    const arrSortBalance = users.slice()
+        .sort((a, b) => getValidatedBalance(a.balance) - getValidatedBalance(b.balance));
     return arrSortBalance.at(-1);
 }
 console.log(moreBalance(users));
@@ -116,7 +116,7 @@ const duplicateNames = (users) => {
             arrDuplicateNames.push(user);
         }
     });
-        return arrDuplicateNames;
+    return arrDuplicateNames;
 
 };
 
