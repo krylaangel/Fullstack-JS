@@ -1,0 +1,50 @@
+.slider {
+    height: 400px;
+    max-width: 500px;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+}
+
+.image {
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.image.active {
+    opacity: 1;
+}
+
+.slider img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.scroll-left, .scroll-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+    transition: background-color 0.3s ease;
+}
+
+.scroll-left {
+    left: 10%;
+}
+
+.scroll-right {
+    right: 10%;
+}
