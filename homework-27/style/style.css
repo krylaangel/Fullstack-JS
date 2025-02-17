@@ -1,10 +1,8 @@
 .slider {
-    height: 400px;
+    height: 300px;
     max-width: 500px;
     position: relative;
     overflow: hidden;
-    display: grid;
-    grid-template-columns: 10% 1fr 10%;
 }
 
 .image {
@@ -23,28 +21,62 @@
 
 .slider img {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     z-index: 1;
 }
 
-.scroll-left, .scroll-right {
+.scroll-button {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(50, 50, 50, 0.7);
     color: white;
     padding: 10px;
-    border-radius: 50%;
+    border-radius: 30%;
     cursor: pointer;
     z-index: 2;
+}
+
+.scroll-button:hover, .circle:hover, .stopper:hover {
+    background-color: rgb(57, 57, 74);
     transition: background-color 0.3s ease;
 }
 
 .scroll-left {
-    left: 10%;
+    left: 5%;
 }
 
 .scroll-right {
-    right: 10%;
+    right: 5%;
+}
+
+.circle__container {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    z-index: 3;
+    justify-content: center;
+    padding: 10px 0;
+    top: 90%;
+}
+
+.circle {
+    background-color: #fbfaff;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+}
+
+.circle.active {
+    background-color: #94a3b8;
+}
+.stopper{
+    background-color: #94a3b8;
+    color: white;
+    width: 30px;
+    height: 30px;
+    align-content: center;
+    text-align: center;
+    top: 20px;
+    position: relative;
+    border-radius: 15%;
+    cursor: pointer;
 }
