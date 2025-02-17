@@ -1,15 +1,28 @@
-const images = document.querySelectorAll('.image');
+const imagesContainer = document.getElementById('gallery');
 const scrollButtons = document.querySelectorAll('.scroll-button');
 const circleContainer = document.querySelector('.circle__container');
 const timeOut = 1;
 let isAutoScrolling = false;
 let autoChangeInterval;
 let indexImages = 0;
+let images = []
+const gallery = [
+    'gory_sneg_relef_226184_1920x1080.jpg',
+    'gory_vershiny_ozero_173286_1920x1080.jpg',
+    'ozero_otrazhenie_gory_1223430_1920x1080.jpg'
+]
 
 
-
-function generateImages(){
-
+function generateImages() {
+    images.innerHTML = '';
+    gallery.forEach(file => {
+        const img = document.createElement('img');
+        img.src = 'images/' + file;
+        img.alt = file;
+        img.classList.add('image');
+        imagesContainer.appendChild(img);
+        images.push(img);
+    })
 }
 
 function generateCircles() {
@@ -105,7 +118,7 @@ function toggleAutoScroll() {
 }
 
 toggleAutoScroll();
-// autoChangeImages();
+generateImages();
 generateCircles();
 scrollImagesByButton();
 scrollImagesByKeyboard()
