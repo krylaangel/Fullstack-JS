@@ -4,9 +4,11 @@ const scrollButtons = document.querySelectorAll('.scroll-button');
 const circleContainer = document.querySelector('.circle__container');
 const timeOut = 1;
 let isAutoScrolling = false;
+let isButtonClicked = false;
 let autoChangeInterval;
 let startX = 0;
 let endX = 0;
+const defaultDifference = 50;
 let indexImages = 0;
 let images = []
 const gallery = [
@@ -17,7 +19,8 @@ const gallery = [
 
 
 function generateImages() {
-    images.innerHTML = '';
+    imagesContainer.innerHTML = '';
+    images = [];
     gallery.forEach(file => {
         const img = document.createElement('img');
         img.src = 'images/' + file;
@@ -70,6 +73,11 @@ function navigateToImages(direction) {
 function scrollImagesByButton() {
     scrollButtons.forEach((button) => {
         button.addEventListener('click', (event) => {
+            if (!isButtonClicked) return;
+            isButtonClicked = true;
+            setTimeout(() => {
+                isButtonClicked = false;
+            }, 100)
             if (event.target.classList.contains('scroll-right')) {
                 navigateToImages('next')
             } else if (event.target.classList.contains('scroll-left')) {
@@ -121,25 +129,22 @@ function toggleAutoScroll() {
 
 function touchDisplay() {
     sliderContainer.addEventListener('touchstart', (event) => {
-        console.log('touchstart', event, event.clientX, event.clientY);
+        if (isButtonClicked) return;
         startX = event.touches[0].clientX;
-
-    })
+    }, {passive: true});
 
     sliderContainer.addEventListener('touchmove', (event) => {
-        console.log('touchmove', event, event.clientX, event.clientY);
         endX = event.touches[0].clientX;
-    })
+    }, {passive: true})
 
-    sliderContainer.addEventListener('touchend', (event) => {
-        console.log('touchend', event, event.clientX, event.clientY);
+    sliderContainer.addEventListener('touchend', () => {
         const difference = startX - endX;
-        if (difference < 0) {
+        if (Math.abs(difference) > defaultDifference) {
             navigateToImages('next')
-        } else {
+        } else if (Math.abs(difference) < -defaultDifference) {
             navigateToImages('prev')
         }
-    })
+    }, {passive: true})
 
 }
 
