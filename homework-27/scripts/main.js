@@ -136,15 +136,15 @@ function touchDisplay(start, move, end) {
     sliderContainer.addEventListener(start, (event) => {
         if (isScrollButton(event) || (isButtonClicked)) return;
         startX = event.touches ? event.touches[0].clientX : event.clientX;
-        document.addEventListener(move, onMove);
-        document.addEventListener(end, onEnd);
-    }, {passive: true});
+        sliderContainer.addEventListener(move, onMove, {passive: false});
+        sliderContainer.addEventListener(end, onEnd);
+    }, {passive: false});
 }
 
 function onMove(event) {
     if (!startX) return;
     endX = event.touches ? event.touches[0].clientX : event.clientX;
-
+    event.preventDefault();
 }
 
 function onEnd(event) {
