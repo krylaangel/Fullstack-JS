@@ -1,9 +1,12 @@
+const sliderContainer = document.getElementById("slider");
 const imagesContainer = document.getElementById('gallery');
 const scrollButtons = document.querySelectorAll('.scroll-button');
 const circleContainer = document.querySelector('.circle__container');
 const timeOut = 1;
 let isAutoScrolling = false;
 let autoChangeInterval;
+let startX = 0;
+let endX = 0;
 let indexImages = 0;
 let images = []
 const gallery = [
@@ -114,9 +117,33 @@ function toggleAutoScroll() {
             }
         }
     })
+}
+
+function touchDisplay() {
+    sliderContainer.addEventListener('touchstart', (event) => {
+        console.log('touchstart', event, event.clientX, event.clientY);
+        startX = event.touches[0].clientX;
+
+    })
+
+    sliderContainer.addEventListener('touchmove', (event) => {
+        console.log('touchmove', event, event.clientX, event.clientY);
+        endX = event.touches[0].clientX;
+    })
+
+    sliderContainer.addEventListener('touchend', (event) => {
+        console.log('touchend', event, event.clientX, event.clientY);
+        const difference = startX - endX;
+        if (difference < 0) {
+            navigateToImages('next')
+        } else {
+            navigateToImages('prev')
+        }
+    })
 
 }
 
+touchDisplay();
 toggleAutoScroll();
 generateImages();
 generateCircles();
