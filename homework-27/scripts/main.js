@@ -21,6 +21,7 @@ const gallery = [
 function generateImages() {
     imagesContainer.innerHTML = '';
     images = [];
+    if (gallery.length === 0) return;
     gallery.forEach(file => {
         const img = document.createElement('img');
         img.src = 'images/' + file;
@@ -73,7 +74,7 @@ function navigateToImages(direction) {
 function scrollImagesByButton() {
     scrollButtons.forEach((button) => {
         button.addEventListener('click', (event) => {
-            if (!isButtonClicked) return;
+            if (isButtonClicked) return;
             isButtonClicked = true;
             setTimeout(() => {
                 isButtonClicked = false;
@@ -127,28 +128,38 @@ function toggleAutoScroll() {
     })
 }
 
-function touchDisplay() {
-    sliderContainer.addEventListener('touchstart', (event) => {
-        if (isButtonClicked) return;
-        startX = event.touches[0].clientX;
+function isScrollButton(event) {
+    return event.target.closest('.scroll-button');
+}
+
+function touchDisplay(start, move, end) {
+    sliderContainer.addEventListener(start, (event) => {
+        if (isScrollButton(event) || (isButtonClicked)) return;
+        startX = event.touches ? event.touches[0].clientX : event.clientX;
+        document.addEventListener(move, onMove);
+        document.addEventListener(end, onEnd);
     }, {passive: true});
+}
 
-    sliderContainer.addEventListener('touchmove', (event) => {
-        endX = event.touches[0].clientX;
-    }, {passive: true})
-
-    sliderContainer.addEventListener('touchend', () => {
-        const difference = startX - endX;
-        if (Math.abs(difference) > defaultDifference) {
-            navigateToImages('next')
-        } else if (Math.abs(difference) < -defaultDifference) {
-            navigateToImages('prev')
-        }
-    }, {passive: true})
+function onMove(event) {
+    if (!startX) return;
+    endX = event.touches ? event.touches[0].clientX : event.clientX;
 
 }
 
-touchDisplay();
+function onEnd(event) {
+    if (isScrollButton(event)) return;
+    const difference = startX - endX;
+    if (difference > defaultDifference) {
+        navigateToImages('next');
+    } else if (difference < -defaultDifference) {
+        navigateToImages('prev');
+    }
+}
+
+touchDisplay('touchstart', 'touchmove', 'touchend');
+touchDisplay('mousedown', 'mousemove', 'mouseup');
+
 toggleAutoScroll();
 generateImages();
 generateCircles();
