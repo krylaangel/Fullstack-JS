@@ -151,9 +151,9 @@ function onEnd(event) {
     if (isScrollButton(event)) return;
     const difference = startX - endX;
     if (difference > defaultDifference) {
-        navigateToImages('next');
-    } else if (difference < -defaultDifference) {
         navigateToImages('prev');
+    } else if (difference < -defaultDifference) {
+        navigateToImages('next');
     }
 }
 
