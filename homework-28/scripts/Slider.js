@@ -14,7 +14,6 @@ export class Slider {
             sliderId: '',
             defaultDifference: 50,
             timeOut: 1,
-            primaryColorButton: '#94a3b8',
             isDisplayStopButton: true
         }
         const options = {
