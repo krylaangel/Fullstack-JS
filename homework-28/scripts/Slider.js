@@ -39,10 +39,10 @@ export class Slider {
     }
 
     setupEventListeners() {
-        this.imagesContainer.addEventListener('click', () => {
-            this.toggleAutoChangeImages();
-            this.imagesContainer.focus();
-
+        this.imagesContainer.addEventListener('click', (event) => {
+            if (event.target.classList.contains('image') || event.target === this.stopper) {
+                this.toggleAutoChangeImages();
+            }            this.imagesContainer.focus();
         });
     }
 
@@ -80,7 +80,7 @@ export class Slider {
     }
 
     createButtonElement(container, pictureButton, teg, selector, otherSelector) {
-        const button = document.createElement(`${teg}`);
+        const button = document.createElement(teg);
         button.classList.add(selector, otherSelector);
         button.innerHTML = pictureButton;
         container.appendChild(button);
@@ -151,12 +151,12 @@ export class Slider {
             this.stopAutoChangeImages()
             this.stopper.innerHTML = '&#10095;';
         } else {
-            this.activationAutoChangeImages();
+            this.startAutoChangeImages();
             this.stopper.innerHTML = '&#9608;';
         }
     }
 
-    activationAutoChangeImages() {
+    startAutoChangeImages() {
         this.isAutoScrolling = true;
         this.autoChangeInterval = setInterval(() => {
             this.navigateToImages('next');
