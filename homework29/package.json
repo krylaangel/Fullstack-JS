@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "name": "homework29",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
