@@ -1,8 +1,6 @@
 import {Slider} from "./Slider.js";
 
 class TouchSlider extends Slider {
-    static nextSlide = 'next';
-    static prevSlide = 'prev';
     startX = 0;
     endX = 0;
 
@@ -27,9 +25,9 @@ class TouchSlider extends Slider {
         this.endX = event.changedTouches ? event.changedTouches[0].clientX : event.clientX;
         const difference = this.startX - this.endX;
         if (difference > this.defaultDifference) {
-            this.navigateToImages(TouchSlider.prevSlide);
+            this.navigateToImages(Slider.prevSlide);
         } else if (difference < -this.defaultDifference) {
-            this.navigateToImages(TouchSlider.nextSlide);
+            this.navigateToImages(Slider.nextSlide);
         }
     }
 }

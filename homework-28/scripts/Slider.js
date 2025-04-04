@@ -1,4 +1,6 @@
 export class Slider {
+    static nextSlide = 'next';
+    static prevSlide = 'prev';
     indexImages = 0;
     isAutoScrolling = false;
     autoChangeInterval;
@@ -91,10 +93,10 @@ export class Slider {
         this.leftButton = this.createButtonElement(this.imagesContainer, '&#10094;', 'div', 'scroll-left', 'scroll-button');
         this.rightButton = this.createButtonElement(this.imagesContainer, '&#10095;', 'div', 'scroll-right', 'scroll-button');
         this.rightButton.addEventListener('click', () => {
-            this.navigateToImages('next');
+            this.navigateToImages(Slider.nextSlide);
         });
         this.leftButton.addEventListener('click', () => {
-            this.navigateToImages('prev');
+            this.navigateToImages(Slider.prevSlide);
         });
     }
 
