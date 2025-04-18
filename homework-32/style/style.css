@@ -107,6 +107,8 @@ body {
 }
 
 .error-message {
+  grid-column: 1 / -1;
+  width: 100%;
   color: red;
   font-size: 1.2em;
   text-align: center;
