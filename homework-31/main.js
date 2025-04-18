@@ -1,6 +1,10 @@
-import {validateDataTypes, validatePatchData, validateRequiredFields} from "./validateData.js";
+import {
+  validateDataTypes,
+  validatePatchData,
+  validateRequiredFields,
+} from "./validateData.js";
 
-console.log('#14. JavaScript homework example file')
+console.log("#14. JavaScript homework example file");
 
 /*
  *
@@ -32,35 +36,32 @@ console.log('#14. JavaScript homework example file')
  * - Належне управління помилками та виключеннями.
  * - Код має бути чистим, добре структурованим, зі зрозумілими назвами змінних та функцій.
  *
-*/
-const baseUrl = 'https://jsonplaceholder.typicode.com';
+ */
+const baseUrl = "https://jsonplaceholder.typicode.com";
 
 async function getData(segment) {
-
-    try {
-        const response = await fetch(`${baseUrl}${segment}`)
-        if (!response.ok) {
-            console.error(`❌HTTP error! Status: ${response.status}`);
-            return response.status;
-        }
-        return await response.json();
-    } catch
-        (error) {
-        console.error('❌Network or fetch error:', error.message);
-        return error.message;
+  try {
+    const response = await fetch(`${baseUrl}${segment}`);
+    if (!response.ok) {
+      console.error(`❌HTTP error! Status: ${response.status}`);
+      return response.status;
     }
+    return response.json();
+  } catch (error) {
+    console.error("❌Network or fetch error:", error.message);
+    return error.message;
+  }
 }
 
-getData("/posts").then(data => {
-    console.table(data);
+getData("/posts").then((data) => {
+  console.table(data);
 });
-getData("/posts/1").then(data => {
-    console.table(data);
+getData("/posts/1").then((data) => {
+  console.table(data);
 });
-getData("/posts/202").then(data => {
-    console.table(data);
+getData("/posts/202").then((data) => {
+  console.table(data);
 });
-
 
 // отримати список користувачів
 /*
@@ -87,42 +88,42 @@ getData("/posts/202").then(data => {
  * - Використання сучасних можливостей JavaScript (ES6+), зокрема асинхронних функцій (`async/await`).
  * - Належне управління помилками та відповідями від API.
  *
-*/
+ */
 const dataPost = {
-    title: 'dataPost',
-    body: 'dataPost',
-    userId: 5,
-}
+  title: "dataPost",
+  body: "dataPost",
+  userId: 5,
+};
 
 async function postData(segment, data) {
-    try {
-        if (!validateDataTypes(data)&&!validateRequiredFields(data)) {
-            return '❌Invalid data format POST';
-        }
-        const response = await fetch(`${baseUrl}${segment}`,
-            {
-                method: 'POST',
-                body: JSON.stringify(data),
-                headers: {
-                    'Content-type': 'application/json; charset=UTF-8',
-                }
-            })
-        if (!response.ok) {
-            console.error(`❌HTTP error! Status: ${response.status}`);
-            return response.status;
-        }
-        const responseData = await response.json();
-        console.log("✅Успішно надіслано:", responseData);
-        return await responseData;
-    } catch
-        (error) {
-        console.error('❌Network or fetch error:', error.message);
-        return error.message;
+  try {
+    if (!validateDataTypes(data) && !validateRequiredFields(data)) {
+      return "❌Invalid data format POST";
     }
+
+    const response = await fetch(`${baseUrl}${segment}`, {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    });
+    if (!response.ok) {
+      console.error(`❌HTTP error! Status: ${response.status}`);
+      return response.status;
+    }
+
+    const responseData = await response.json();
+    console.log("✅Успішно надіслано:", responseData);
+    return responseData;
+  } catch (error) {
+    console.error("❌Network or fetch error:", error.message);
+    return error.message;
+  }
 }
 
-postData("/posts", dataPost).then(data => {
-    console.table(data);
+postData("/posts", dataPost).then((data) => {
+  console.table(data);
 });
 
 /*
@@ -151,39 +152,41 @@ postData("/posts", dataPost).then(data => {
  *
  */
 const dataPut = {
-    title: 'dataPut',
-    body: 'dataPut',
-    userId: 1,
-}
+  title: "dataPut",
+  body: "dataPut",
+  userId: 1,
+};
 
 async function putData(id, data) {
-    try {
-        if (!validateDataTypes(data) && !validateRequiredFields(data)) {
-            return '❌Invalid data format PUT';
-        }
-        const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`,
-            {
-                method: 'PUT',
-                body: JSON.stringify(data),
-                headers: {
-                    'Content-type': 'application/json; charset=UTF-8',
-                }
-            })
-        if (!response.ok) {
-            console.error(`❌HTTP error! Status: ${response.status}`);
-            return response.status;
-        }
-        const responseData = await response.json();
-        console.log("✅Успішно надіслано:", responseData);
-        return await responseData;
-    } catch (error) {
-        console.error('❌Network or fetch error:', error.message);
-        return error.message;
+  try {
+    if (!validateDataTypes(data) && !validateRequiredFields(data)) {
+      return "❌Invalid data format PUT";
     }
+    const response = await fetch(
+      `https://jsonplaceholder.typicode.com/posts/${id}`,
+      {
+        method: "PUT",
+        body: JSON.stringify(data),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      },
+    );
+    if (!response.ok) {
+      console.error(`❌HTTP error! Status: ${response.status}`);
+      return response.status;
+    }
+    const responseData = await response.json();
+    console.log("✅Успішно надіслано:", responseData);
+    return await responseData;
+  } catch (error) {
+    console.error("❌Network or fetch error:", error.message);
+    return error.message;
+  }
 }
 
-putData(3, dataPut).then(data => {
-    console.table(data);
+putData(3, dataPut).then((data) => {
+  console.table(data);
 });
 
 /*
@@ -212,37 +215,43 @@ putData(3, dataPut).then(data => {
  *
  */
 const dataPatch = {
-    title: 'dataPatch',
-    body: 'dataPatch',
-    userId: 1,
-}
+  title: "dataPatch",
+  body: "dataPatch",
+  userId: 1,
+};
+
 async function patchData(id, data) {
-    try {
-        if (!validatePatchData(data)) {
-            return '❌Invalid data format PATCH';
-        }
-        const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`,
-            {
-                method: 'PATCH',
-                body: JSON.stringify(data),
-                headers: {
-                    'Content-type': 'application/json; charset=UTF-8',
-                }
-            })
-        if (!response.ok) {
-            console.error(`❌HTTP error! Status: ${response.status}`);
-            return response.status;
-        }
-        const responseData = await response.json();
-        console.log("✅Успішно надіслано:", responseData);
-        return await responseData;
-    } catch (error) {
-        console.error('❌Network or fetch error:', error.message);
-        return error.message;    }
+  try {
+    if (!validatePatchData(data)) {
+      return "❌Invalid data format PATCH";
+    }
+    const response = await fetch(
+      `https://jsonplaceholder.typicode.com/posts/${id}`,
+      {
+        method: "PATCH",
+        body: JSON.stringify(data),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      },
+    );
+    if (!response.ok) {
+      console.error(`❌HTTP error! Status: ${response.status}`);
+      return response.status;
+    }
+    const responseData = await response.json();
+    console.log("✅Успішно надіслано:", responseData);
+    return responseData;
+  } catch (error) {
+    console.error("❌Network or fetch error:", error.message);
+    return error.message;
+  }
 }
-patchData(2, dataPatch).then(data => {
-    console.table(data);
+
+patchData(2, dataPatch).then((data) => {
+  console.table(data);
 });
+
 /*
  *
  * #5
@@ -272,25 +281,28 @@ patchData(2, dataPatch).then(data => {
  */
 
 async function deleteData(id) {
-    try {
-        const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
-            method: 'DELETE',
-        });
-        if (response.ok) {
-            console.log(`✅Запис с id ${id} успешно удалена`);
-            return 'Success';
-        } else {
-            console.error(`❌Помилка при видаленні! Статус: ${response.status}`);
-            return response.status;
-        }
-    } catch (error) {
-        console.error('❌Network or fetch error:', error.message);
-        return error.message;
+  try {
+    const response = await fetch(
+      `https://jsonplaceholder.typicode.com/posts/${id}`,
+      {
+        method: "DELETE",
+      },
+    );
+    if (response.ok) {
+      console.log(`✅Запис с id ${id} успешно удалена`);
+      return "Success";
+    } else {
+      console.error(`❌Помилка при видаленні! Статус: ${response.status}`);
+      return response.status;
     }
+  } catch (error) {
+    console.error("❌Network or fetch error:", error.message);
+    return error.message;
+  }
 }
 
-deleteData(1).then(data => {
-    console.table(data);
+deleteData(1).then((data) => {
+  console.table(data);
 });
 
-export {getData, postData, putData, patchData, deleteData}
+export { getData, postData, putData, patchData, deleteData };
