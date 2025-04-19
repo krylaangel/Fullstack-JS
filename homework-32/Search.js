@@ -17,6 +17,10 @@ export class Search {
       clearTimeout(options.debounceTimeout);
       options.debounceTimeout = setTimeout(async () => {
         try {
+          if (!this.API_KEY) {
+            this.displayError("🔑 API ключ не вказано");
+            return;
+          }
           await this.search(query);
         } catch (error) {
           this.displayError("Сталася неочікувана помилка під час пошуку.");
@@ -28,8 +32,8 @@ export class Search {
 
   async search(query) {
     try {
+      this.resultsContainer.innerHTML = "";
       if (!query) {
-        this.resultsContainer.innerHTML = "";
         return;
       }
       const response = await fetch(`${this.baseUrl}${query}`);
@@ -55,6 +59,7 @@ export class Search {
   }
 
   displayResults(movies) {
+    this.resultsContainer.innerHTML = "";
     const fragment = new DocumentFragment();
     movies.forEach((movie) => {
       const card = document.createElement("div");
