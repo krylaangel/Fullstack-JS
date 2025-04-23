@@ -1,0 +1,39 @@
+$primary-color: #4caf50;
+$primary-hover-color: #034730;
+
+$font-stack: 'Segoe UI', sans-serif;
+
+body {
+  font-family: $font-stack;
+  background: #f2f2f2;
+  color: #333;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: $primary-color;
+  font-size: 2rem;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  background: $primary-color;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+
+  &:hover {
+    background: $primary-hover-color;
+  }
+}
