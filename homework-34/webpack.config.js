@@ -6,11 +6,11 @@ const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 module.exports = {
   mode: process.env.NODE_ENV === "production" ? "production" : "development",
   entry: {
-    main: path.resolve(__dirname, "./src/index.js"),
-    stat: path.resolve(__dirname, "./src/statistic.js"),
+    main: "./src/index.js",
+    stat: "./src/statistic.js",
   },
   output: {
-    filename: "[name].[contenthash].js",
+    filename: "js/[name].[contenthash].js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
@@ -66,7 +66,7 @@ module.exports = {
       filename: "[name].[contenthash].css",
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "./src/index.html"),
+      template: "./src/index.html",
       chunks: ["main", "stat"],
     }),
   ],
