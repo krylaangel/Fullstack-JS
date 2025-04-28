@@ -14,6 +14,16 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
+  resolve: {
+    alias: {
+      "@src": path.resolve(__dirname, "src/"),
+      "@assets": path.resolve(__dirname, "src/assets/"),
+      "@fonts": path.resolve(__dirname, "src/fonts/"),
+      "@styles": path.resolve(__dirname, "src/styles/"),
+      "@images": path.resolve(__dirname, "src/images/"),
+    },
+    extensions: [".js", ".jsx", ".json", ".css", ".jpg", ".png"], // Расширения, которые можно опускать при импорте
+  },
   module: {
     rules: [
       {
