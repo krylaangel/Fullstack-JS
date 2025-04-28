@@ -1,5 +1,5 @@
 import "./styles/main.css";
-import image from "./images/gory_sneg_relef_226184_1920x1080.jpg";
+import image from "@images/gory_sneg_relef_226184_1920x1080.jpg";
 
 const img = document.createElement("img");
 img.src = image;
