@@ -85,7 +85,7 @@ enum OrderStatus {
   Cancelled = "Cancelled",
 }
 
-function getOrderStatus(status: OrderStatus) {
+function getOrderStatus(status: OrderStatus): string {
   switch (status) {
     case OrderStatus.Pending:
       return "Замовлення очікує на обробку";
