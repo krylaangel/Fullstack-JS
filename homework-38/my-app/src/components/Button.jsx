@@ -1,14 +1,15 @@
-import React from 'react';
-import{useState, useEffect} from 'react';
+import React from "react";
 
 const Text = {
-    ClickUp:"click-up",
-    ClickDown:"click-down",
+  ClickUp: "Порахувати бали",
 };
 
-
-const Button = ({text, onClick, ...props}) => {
-    return (<button className="button-up" onClick={onClick} {...props} >{text}</button>)
-}
-export {Text};
+const Button = ({ text, onClick, calculateAnswers, ...props }) => {
+  return (
+    <button className="button-up" onClick={onClick} {...props}>
+      {text}
+    </button>
+  );
+};
+export { Text };
 export default Button;

@@ -1,12 +1,10 @@
-import './App.css';
-import Button, {Text} from "./components/Button";
+import "./App.css";
+import QuestionsList from "./components/QuestionsList";
 
 function App() {
   return (
     <div className="app">
-<Button text={Text.ClickUp} onClick={(()=>alert("click up"))}></Button>
-        <Button text={Text.ClickDown} onClick={(()=>alert("click down"))}></Button>
-
+      <QuestionsList></QuestionsList>
     </div>
   );
 }

@@ -1,18 +1,23 @@
 .app {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  text-align: left;
+  flex-direction: row;
+  align-items: center;
+  border: 3px solid #a082c1;
+  padding: 10px;
 }
-.button-up{
-        width: 100px;
-        height: 40px;
-        background: #a082c1;
-        border-color: #7f29d8;
-        border-radius: 10px;
-    }
-    .button-up:hover{
-        background: #9a77bf;
-        border-color: #701fc5;
-    }
+.questions-list, .result {
+  padding: 10px;
+  box-sizing: border-box;
+}
+.button-up {
+  background: #a082c1;
+  border-color: #b5a1ca;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px;
+}
+.button-up:hover {
+  background: #9a77bf;
+  border-color: #701fc5;
+}
