@@ -1,0 +1,18 @@
+.app {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.button-up{
+        width: 100px;
+        height: 40px;
+        background: #a082c1;
+        border-color: #7f29d8;
+        border-radius: 10px;
+    }
+    .button-up:hover{
+        background: #9a77bf;
+        border-color: #701fc5;
+    }
