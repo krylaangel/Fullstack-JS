@@ -1,4 +1,4 @@
-export const answersResult = [
+export const ANSWERS_RESULT = [
   {
     id: 1,
     range: [0, 10],

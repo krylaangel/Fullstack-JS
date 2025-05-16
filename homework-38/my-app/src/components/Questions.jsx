@@ -1,4 +1,4 @@
-export const questions = [
+export const QUESTIONS = [
   {
     id: 1,
     questionValue: "Я рідко втрачаю самоконтроль у стресових ситуаціях.",
