@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { questions } from "./Questions";
+import { QUESTIONS } from "./Questions";
 import Button, { Text } from "./Button";
-import { answersResult } from "./Answers";
+import { ANSWERS_RESULT } from "./Answers";
 import Result from "./Result";
 
 const QuestionsList = () => {
@@ -13,16 +13,16 @@ const QuestionsList = () => {
   const calculateAnswers = Object.values(answers).reduce((accum, answer) => {
     return accum + answer;
   }, 0);
-  const matchedResult = answersResult.find((item) => {
+  const matchedResult = ANSWERS_RESULT.find((item) => {
     const [min, max] = item.range;
     return calculateAnswers >= min && calculateAnswers <= max;
   });
-  const handleButtonClick = (event) => {
+  const handleButtonClick = () => {
     setShowResult(true);
   };
   return (
     <div className="questions-list">
-      {questions.map((question) => (
+      {QUESTIONS.map((question) => (
         <div key={question.id}>
           <p>{question.questionValue}</p>
           <div>
