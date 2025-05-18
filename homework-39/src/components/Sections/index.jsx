@@ -1,12 +1,12 @@
-import QuestionsList from "./QuestionsList.jsx";
-import Header from "./Header.jsx";
-import Footer from "./Footer.jsx";
+import QuestionsListContainer from "./containers/QuestionsListContainer.jsx";
+import Header from "./ui/Header.jsx";
+import Footer from "./ui/Footer.jsx";
 
 const Sections = () => {
   return (
     <div className="main">
       <Header />
-      <QuestionsList />
+      <QuestionsListContainer />
       <Footer />
     </div>
   );

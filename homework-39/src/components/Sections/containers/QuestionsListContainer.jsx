@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { Questions } from "../../constants/questions.js";
-import Button from "./Button.jsx";
-import { ANSWERS_RESULT } from "../../constants/answers.js";
-import Result from "./Result.jsx";
-import { BUTTONS_TEXT } from "./../../constants/buttons.js";
+import { Questions } from "../../../constants/questions.js";
+import Button from "../ui/Button.jsx";
+import { ANSWERS_RESULT } from "../../../constants/answers.js";
+import Result from "../ui/Result.jsx";
+import { BUTTONS_TEXT } from "../../../constants/buttons.js";
 
-const QuestionsList = () => {
+const QuestionsListContainer = () => {
   const [answers, setAnswers] = useState({});
   const [showResult, setShowResult] = useState(false);
   const [currentQuestionIndex, setcurrentQuestionIndex] = useState(0);
@@ -60,4 +60,4 @@ const QuestionsList = () => {
     </div>
   );
 };
-export default QuestionsList;
+export default QuestionsListContainer;
