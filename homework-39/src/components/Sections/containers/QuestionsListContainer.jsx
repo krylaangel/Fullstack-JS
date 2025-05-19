@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import Button from "../ui/Button.jsx";
 import Result from "../ui/Result.jsx";
 import { BUTTONS_TEXT } from "../../../constants/buttons.js";
+import Question from "../ui/Question.jsx";
 
 const QuestionsListContainer = ({ questions, results, answers }) => {
   const [questionResponses, setQuestionResponses] = useState({});
   const [showResult, setShowResult] = useState(false);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+
   const currentQuestion = questions[currentQuestionIndex];
   const isCurrentQuestionAnswered =
     questionResponses[currentQuestion.id] !== undefined;
@@ -30,27 +32,15 @@ const QuestionsListContainer = ({ questions, results, answers }) => {
       setShowResult(true);
     }
   };
+
   return (
-    <div className="questions-list">
-      <p className="questions">{currentQuestion.questionValue}</p>
-      <div>
-        {answers.map((answer) => (
-          <label key={answer.id}>
-            <input
-              checked={
-                questionResponses[currentQuestion.id] === answer.answersPoints
-              }
-              type="radio"
-              name={`question${currentQuestion.id}`}
-              value={answer.answersPoints}
-              onChange={() =>
-                handleChange(currentQuestion.id, answer.answersPoints)
-              }
-            ></input>
-            {answer.answersValue}
-          </label>
-        ))}
-      </div>
+    <div className="">
+      <Question
+        currentQuestion={currentQuestion}
+        questionResponses={questionResponses}
+        handleChange={handleChange}
+        answers={answers}
+      />
       <Button
         disabled={!isCurrentQuestionAnswered}
         text={

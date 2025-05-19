@@ -1,14 +1,13 @@
 import Header from "./ui/Header.jsx";
 import Footer from "./ui/Footer.jsx";
 import Test from "./Test.jsx";
+import UserSurveyForm from "./UserSurveyForm.jsx";
 
 const Sections = () => {
   return (
-    <div className="main">
-      <Header />
+    <main className="flex-grow clamp">
       <Test />
-      <Footer />
-    </div>
+    </main>
   );
 };
 export default Sections;
