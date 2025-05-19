@@ -1,54 +1,50 @@
 import React, { useState } from "react";
-import { Questions } from "../../../constants/questions.js";
 import Button from "../ui/Button.jsx";
-import { ANSWERS_RESULT } from "../../../constants/answers.js";
 import Result from "../ui/Result.jsx";
 import { BUTTONS_TEXT } from "../../../constants/buttons.js";
+import Question from "../ui/Question.jsx";
 
-const QuestionsListContainer = () => {
-  const [answers, setAnswers] = useState({});
+const QuestionsListContainer = ({ questions, results, answers }) => {
+  const [questionResponses, setQuestionResponses] = useState({});
   const [showResult, setShowResult] = useState(false);
-  const [currentQuestionIndex, setcurrentQuestionIndex] = useState(0);
-  const currentQuestion = Questions[currentQuestionIndex];
-  const isCurrentQuestionAnswered = answers[currentQuestion.id] !== undefined;
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+
+  const currentQuestion = questions[currentQuestionIndex];
+  const isCurrentQuestionAnswered =
+    questionResponses[currentQuestion.id] !== undefined;
   const handleChange = (questionId, value) => {
-    setAnswers({ ...answers, [questionId]: value });
+    setQuestionResponses({ ...questionResponses, [questionId]: value });
   };
-  const calculateAnswers = Object.values(answers).reduce((accum, answer) => {
-    return accum + answer;
-  }, 0);
-  const matchedResult = ANSWERS_RESULT.find((item) => {
+  const calculateAnswers = Object.values(questionResponses).reduce(
+    (accum, answer) => {
+      return accum + answer;
+    },
+    0,
+  );
+  const matchedResult = results.find((item) => {
     const [min, max] = item.range;
     return calculateAnswers >= min && calculateAnswers <= max;
   });
   const handleButtonClick = () => {
-    if (currentQuestionIndex < Questions.length - 1) {
-      setcurrentQuestionIndex(currentQuestionIndex + 1);
+    if (currentQuestionIndex < questions.length - 1) {
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
       setShowResult(true);
     }
   };
+
   return (
-    <div className="questions-list">
-      <p className="questions">{currentQuestion.questionValue}</p>
-      <div>
-        {[1, 2, 3, 4, 5].map((num) => (
-          <label key={num}>
-            <input
-              checked={answers[currentQuestion.id] === num}
-              type="radio"
-              name={`question${currentQuestion.id}`}
-              value={num}
-              onChange={() => handleChange(currentQuestion.id, num)}
-            ></input>
-            {num}
-          </label>
-        ))}
-      </div>
+    <div className="">
+      <Question
+        currentQuestion={currentQuestion}
+        questionResponses={questionResponses}
+        handleChange={handleChange}
+        answers={answers}
+      />
       <Button
         disabled={!isCurrentQuestionAnswered}
         text={
-          currentQuestionIndex < Questions.length - 1
+          currentQuestionIndex < questions.length - 1
             ? BUTTONS_TEXT.Next
             : BUTTONS_TEXT.ClickUp
         }
